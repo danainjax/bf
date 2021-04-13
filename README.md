@@ -1,19 +1,21 @@
 # README
 
+bf
+
+(Short for bookface) - an application that allows you to review books - social media for books!
+
 * Ruby version
+    2.6.6
 
 * System dependencies
+    bundle
 
-* Configuration
 
-* Database creation
+* Database creation and initialization
+    rails db:migrate
+    rails db:seed
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
 
-* ...
+
