@@ -26,8 +26,15 @@ class BooksController < ApplicationController
     end
 
     def index
-        @books = Book.all 
+        
+        if params[:title]
+            @books = Book.where('title LIKE ?', "%#{params[:title].upcase}%")
+        else
+            @books = Book.all
+        end
     end
+     
+    
 
     def destroy
         @book.destroy

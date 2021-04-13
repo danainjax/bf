@@ -1,0 +1,16 @@
+<h3> Search titles </h3>
+
+
+    <%= form_tag(books_path, method: :get) do %>
+    Title <%= text_field_tag :title, params[:title] %>
+  
+    <%= submit_tag 'Search', name: nil %>
+
+<% end %>
+
+
+<% @books.each do |book| %>
+<p>
+    <%= link_to book.title, book_path(book[:id]) %>
+</p>
+<% end %>

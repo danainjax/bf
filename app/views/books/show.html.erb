@@ -8,4 +8,6 @@ Description: <%= @book.description %><br><br>
 Genre: <%= @book.genre %><br>
 Image: <%= @book.image %><br>
 Link to Purchase: <%= @book.link_to_purchase%><br>
-
+<%= link_to "edit", edit_book_path(@book) %><br>
+<%= link_to "review", new_review_path(@book[:id]) %>
+<hr />
