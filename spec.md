@@ -15,13 +15,13 @@ Specs:
 
 - [X] Include at least two has_many through relationships (x has_many y through z; e.g. Recipe has_many Items through Ingredients)
     
-    Reader has_many :books through: :reviews
- 	Book has_many :readers :through :reviews
+    Reader has_many :books, through: :reviews
+ 	Book has_many :readers, through: :reviews
 
 - [X] Include at least one many-to-many relationship (x has_many y through z, y has_many x through z; e.g. Recipe has_many Items through Ingredients, Item has_many Recipes through Ingredients)
     
-    Reader has_many :books through: :reviews
- 	Book has_many :readers :through :reviews
+    Reader has_many :books, through: :reviews
+ 	Book has_many :readers, through: :reviews
 
 - [X] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (attribute_name e.g. ingredients.quantity)
     
