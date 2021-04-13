@@ -1,0 +1,23 @@
+<%= form_with model: @review  do |f| %>
+
+  <%= f.label 'Title:' %><br>
+  <%= f.collection_select :book_id, Book.all, :id, :title %><br>
+
+  <%= f.label 'Book review:' %><br>
+  <%= f.text_area :book_review %><br>
+
+  <%= f.label 'Star Rating' %><br>
+  <%= f.select :star_rating, [5,4,3,2,1] %><br>
+
+  <hr />
+
+  <%= f.label 'Reviewed by:' %><br>
+  <%= f.collection_select :reader_id, Reader.all, :id, :username %><br>
+
+  <%= f.label :status %><br>
+  <%= f.select :status, ["Want to Read", "Currently Reading", "Read"] %><br><br>
+
+  
+
+  <%= f.submit  %>
+<% end %>
