@@ -25,11 +25,11 @@ Sprint 4 - Refactoring/DRY
 - [ ] Views use partials if appropriate
 
 Sprint 5 - How Does it Look?
-- [ ]    Bootstrap
+- [ ]   Bootstrap
 - [ ]   Styling
 - [ ]   Wireframing
 - [ ]   bf logo
 - [ ]   Nav bar
 
 Sprint 6 - Instructor Review and Feedback Prior to Project Review
-- [ ]Schedule meeting with Aysan to go through App and write notes on what needs to be fixed
+- [ ]   Schedule meeting with Aysan to go through App and write notes on what needs to be fixed
