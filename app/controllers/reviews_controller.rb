@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
     end
     
     def show
-        @review = Review.find_by_id(params[:id])
+        @review = Review.find(params[:id])
     end
     
     def create
@@ -14,7 +14,11 @@ class ReviewsController < ApplicationController
     end
     
     def index
-        @reviews = Review.all 
+        if params[:book_id]
+            @reviews = Book.find(params[:book_id]).reviews
+        else
+            @reviews = Review.all 
+        end
     end
     
     def edit
