@@ -17,7 +17,11 @@ class ReviewsController < ApplicationController
         if params[:book_id]
             @reviews = Book.find(params[:book_id]).reviews
         else
-            @reviews = Review.all 
+            if params[:reader_id]
+                @reviews = Reader.find(params[:reader_id]).reviews
+            else
+                @reviews = Review.all 
+            end
         end
     end
     

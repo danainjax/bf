@@ -1,9 +1,10 @@
 <% @reviews.each do |review| %>
     
    <ul> 
-        
-          <li>  Title: <%= review.book.title %>- book id: <%= review.book_id %><br>
+
+          <li>  Reader Id: <%= review.reader_id %> Title: <%= review.book.title %>- book id: <%= review.book_id %><br>
             Review: <%= review.book_review %>- id: <%= review.id %> </li>
+      
         
    </ul>
    

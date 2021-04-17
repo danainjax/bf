@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   
-
-  resources :readers 
+  resources :books
   resources :reviews
+
+  resources :readers do 
+    resources :reviews, only: [:index, :show, :new]
+  end
 
   resources :books do
     resources :reviews, only: [:index, :show, :new]
