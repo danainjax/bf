@@ -33,7 +33,7 @@ class Book < ApplicationRecord
         young_adult = JSON.parse(response)["results"]["books"]
         #create a Ruby book object with all the info in the books array, use an iterator
         young_adult.each do |book|
-            self.create(title: book["title"], author: book["author"], publisher: book["publisher"], description: book["description"], image: book["book_image"], link_to_purchase: book["amazon_product_url"]) 
+            self.create(title: book["title"], author: book["author"], publisher: book["publisher"], description: book["description"], image: book["book_image"], link_to_purchase: book["amazon_product_url"], published: book["published_date"]) 
         # binding.pry
         
         end
