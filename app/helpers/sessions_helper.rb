@@ -15,5 +15,10 @@ module SessionsHelper
         !current_reader.nil?
     end
 
+    def log_out
+        session.delete(:reader_id)
+        @current_reader = nil
+    end
+
     
 end
