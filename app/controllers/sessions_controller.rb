@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
     
   end
 
+
   def create
     reader = Reader.find_by(username: params[:session][:username])
     if reader && reader.authenticate(params[:session][:password])

@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
   
-  get   'sessions/new'
-  get   'sessions/create'
-  get   'sessions/destroy'
-
   get    'signup' => 'readers#new'
   get    'login' => 'sessions#new'
   post   'login' => 'sessions#create'

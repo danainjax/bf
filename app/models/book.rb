@@ -34,7 +34,7 @@ class Book < ApplicationRecord
         # byebug
         #create a Ruby book object with all the info in the books array, use an iterator
         young_adult.each do |book|
-            self.create(title: book["title"], author: book["author"], publisher: book["publisher"], description: book["description"], image: book["book_image"], link_to_purchase: book["amazon_product_url"]) 
+            self.create(title: book["title"], author: book["author"], publisher: book["publisher"], description: book["description"], image: book["book_image"], link_to_purchase: book["amazon_product_url"], genre: book["list_name"], published: book["published_date"]) 
         # binding.pry
         
         end
