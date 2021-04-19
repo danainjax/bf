@@ -4,6 +4,7 @@ Build List
 2. Published date not working in build from API. 
 3. Make genre = list_name from API for now, unless you can find data that is a category of book or genre
 4. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
+5. Test and see if login/out signup routes are meeting project specs, conditional rendering in layouts_header is not behaving as expected. Code in Sessions Module seems to be faulty?
 
 
 
