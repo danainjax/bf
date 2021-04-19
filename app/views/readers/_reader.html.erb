@@ -1,3 +1,10 @@
+<% if !!flash[:errors] %>
+2  <% flash[:errors].each do |e| %>
+3    <p><%= e %></p> <br>
+4    <% end %>
+5  <% end %>
+
+
 <%= form_with model: @reader  do |f| %>
     <%= f.label :username %><br>
     <%= f.text_field :username%><br>

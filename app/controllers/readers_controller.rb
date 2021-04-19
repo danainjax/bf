@@ -7,7 +7,10 @@ class ReadersController < ApplicationController
     def create
        @reader = Reader.new(reader_params)
         if @reader.save 
-            redirect_to reader_path(@reader)
+            flash[:success] = "Welcome to bookface!"
+            redirect_to @reader
+        else
+            render 'new'
         end
     end
 
