@@ -29,12 +29,13 @@ class Book < ApplicationRecord
 
     def self.get_young_adult
         response = RestClient.get("https://api.nytimes.com/svc/books/v3/lists/current/young-adult.json?api-key=#{ENV["KEY"]}")
-        #byebug
-        young_adult = JSON.parse(response)["results"]["books"]
+        # byebug
+        young_adult = JSON.parse(response)["results"].to_a
         # byebug
         #create a Ruby book object with all the info in the books array, use an iterator
         young_adult.each do |book|
-            self.create(title: book["title"], author: book["author"], publisher: book["publisher"], description: book["description"], image: book["book_image"], link_to_purchase: book["amazon_product_url"], genre: book["list_name"], published: book["published_date"]) 
+            byebug
+            self.create(title: book["books"]["title"], author: book["author"], publisher: book["publisher"], description: book["description"], image: book["book_image"], link_to_purchase: book["amazon_product_url"], genre: book["list_name"], published: book["published_date"]) 
         # binding.pry
         
         end
