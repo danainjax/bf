@@ -11,5 +11,8 @@
     
 
     <%= f.submit "Log in"%>
+    <h3> Or Login with Google</h3>
+    <%= button_to "Log in with Google", '/auth/google_oauth2'  %>
+    
     <p> New reader? <%= link_to "Sign up", signup_path %>
 <% end %>

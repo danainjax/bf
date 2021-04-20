@@ -1,19 +1,39 @@
 class SessionsController < ApplicationController
-  def new
+  def new #renders the login form, does not create a new object
+    # if logged_in?
+    #   redirect_to 'root'
+  end
+
+  def home #root route
     
   end
 
-  def home
-  end
+  # def omniauth
+  #   reader = Reader.find_or_create_by(uid: request.env['omniauth.auth'][:uid], provider: )
+  #     r.username = request.env['omniauth.auth'][:info][:email]
+  #     r.email = request.env['omniauth.auth'][:info][:email]
+  #     r.password = SecureRandom.hex(15)
+  #   end 
+  #   if reader.valid?
+  #     session[:reader_id] = reader.id
+  #     redirect_to 'root'
+  #   else
+  #     redirect_to login_path
+  #   end
+  # end
 
+  #this is logging in
   def create
     reader = Reader.find_by(username: params[:session][:username])
+    #finds the user by username key in the params
     if reader && reader.authenticate(params[:session][:password])
+      #if the reader username is found in the params and the password authenticates...
       session[:reader_id] = reader.id
+      #then create a new key in sessions hash, setting it equal to existing user's id
         redirect_to reader
     else
       flash[:message] = "Invalid username or password"
-      redirect_to "/login"
+      render :new
     end
   end
 

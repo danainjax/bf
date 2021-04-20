@@ -4,13 +4,14 @@ class ReadersController < ApplicationController
         @reader = Reader.new
     end
 
+    #this is the signup action
     def create
-       @reader = Reader.new(reader_params)
-        if @reader.save 
-            session[:reader_id] = @reader.id
-            redirect_to @reader
+       reader = Reader.new(reader_params)
+        if reader.save 
+            session[:reader_id] = reader.id
+            redirect_to reader
         else
-            @reader.errors.full_messages
+            reader.errors.full_messages
             render 'new'
         end
     end

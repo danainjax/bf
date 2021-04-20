@@ -1,7 +1,8 @@
 <h1><%= @reader.username %></h1>
 
-<hr>
 
+<hr>
+<%= link_to "edit", edit_reader_path(@reader) %><br>
 Username: <%= @reader.username%><br>
 Name: <%= @reader.first_name %> <%= @reader.last_name %><br>
 Email: <%= @reader.email %><br>
@@ -14,9 +15,10 @@ Favorite Book: <%= @reader.favorite_book %><br><br>
 
 <% @reviews = current_reader.reviews %>
 <% @reviews.each do |review| %>
-    <li><%= link_to review.book.title, review_path(review) %><br>
-    <%= review.status %></li>
+    <li> <%= link_to review.book.title, review_path(review) %><br>
+    <img src= "<%= review.book.image %>" height ="100" width "75" ><br>
+    <em><%= review.status %></em><br><br></li>
 <% end %>
  <hr />
-<%= link_to "edit", edit_reader_path(@reader) %>
+
        
