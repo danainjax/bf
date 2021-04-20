@@ -1,6 +1,7 @@
 <%= form_with model: @review  do |f| %>
 
   <%= f.label 'Title:' %><br>
+  <!-- <%= f.hidden_field :book_id, :value => @review.book_id %> -->
   <%= f.collection_select :book_id, Book.all, :id, :title %><br>
 
   <%= f.label 'Book review:' %><br>

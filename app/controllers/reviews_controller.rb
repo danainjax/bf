@@ -9,9 +9,13 @@ class ReviewsController < ApplicationController
     end
     
     def create
-        @review = Review.new(review_params)
-        @review.save
+        if params[:book_id]
+            @review = Book.find(params[:book_id]).build(review_params)
+        else
+            @review = Review.new(review_params)
+            @review.save
         redirect_to review_path(@review)
+        end
     end
     
     def index
