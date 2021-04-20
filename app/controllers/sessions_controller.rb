@@ -12,7 +12,8 @@ class SessionsController < ApplicationController
       session[:reader_id] = reader.id
         redirect_to reader
     else
-      render 'new'
+      flash[:message] = "Invalid username or password"
+      redirect_to "/login"
     end
   end
 
