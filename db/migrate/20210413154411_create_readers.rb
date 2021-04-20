@@ -8,6 +8,7 @@ class CreateReaders < ActiveRecord::Migration[6.1]
       t.string :favorite_genre
       t.string :favorite_book
       t.string :profile_pic
+      t.string :email
 
       t.timestamps
     end

@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2021_04_13_155102) do
     t.string "favorite_genre"
     t.string "favorite_book"
     t.string "profile_pic"
+    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

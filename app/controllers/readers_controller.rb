@@ -38,6 +38,6 @@ class ReadersController < ApplicationController
 private
 
     def reader_params
-        params.require(:reader).permit(:username, :password, :first_name, :last_name, :favorite_genre, :favorite_book, :profile_pic)
+        params.require(:reader).permit(:username, :password, :first_name, :last_name, :favorite_genre, :favorite_book, :profile_pic, :email)
     end
 end
