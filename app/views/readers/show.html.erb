@@ -7,7 +7,7 @@ Name: <%= @reader.first_name %> <%= @reader.last_name %><br>
 Email: <%= @reader.email %><br>
 Favorite Genre: <%= @reader.favorite_genre%><br>
 Favorite Book: <%= @reader.favorite_book %><br><br>
-<img src= "<%= @reader.profile_pic %>" alt="profile pic" width="150" height ="200"><br>
+<img src= "<%= (url_for(@reader.profile_pic)) %>" alt="profile pic" height="250", width="150"><br>
  <hr />
 <%= link_to "edit", edit_reader_path(@reader) %>
        

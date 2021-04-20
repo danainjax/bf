@@ -10,6 +10,7 @@ class ReadersController < ApplicationController
             flash[:success] = "Welcome to bookface!"
             redirect_to @reader
         else
+            @reader.errors.full_messages
             render 'new'
         end
     end

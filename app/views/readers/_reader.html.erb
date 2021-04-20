@@ -1,9 +1,3 @@
-<% if !!flash[:errors] %>
-2  <% flash[:errors].each do |e| %>
-3    <p><%= e %></p> <br>
-4    <% end %>
-5  <% end %>
-
 
 <%= form_with model: @reader  do |f| %>
     <%= f.label :username %><br>
@@ -21,7 +15,7 @@
     <%= f.label :favorite_book%><br>
     <%= f.text_field :favorite_book%><br>
     <%= f.label :profile_pic%><br>
-    <%= f.text_field :profile_pic%> <br>
+    <%= f.file_field :profile_pic%> <br>
 
     <%= f.submit %>
 <% end %>
