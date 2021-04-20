@@ -10,6 +10,13 @@ Favorite Book: <%= @reader.favorite_book %><br><br>
 <% if @reader.profile_pic.attached? %>
     <img src= "<%= (url_for(@reader.profile_pic)) %>" alt="profile pic" height="250", width="150"><br>
 <% end %>
+<li><%= link_to "My Reviews", reader_reviews_path(current_reader) %><br>
+
+<% @reviews = current_reader.reviews %>
+<% @reviews.each do |review| %>
+    <li><%= link_to review.book.title, review_path(review) %><br>
+    <%= review.status %></li>
+<% end %>
  <hr />
 <%= link_to "edit", edit_reader_path(@reader) %>
        

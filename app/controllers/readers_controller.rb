@@ -16,7 +16,8 @@ class ReadersController < ApplicationController
     end
 
     def show
-        @reader = Reader.find(params[:id])
+        @reader = Reader.find_by_id(params[:id])
+        redirect_to '/' if !@reader
     end
 
     def edit

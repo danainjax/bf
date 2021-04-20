@@ -1,12 +1,13 @@
 <div>
         <h2><%= @review.book.title%></h2>
-        <hr />
         <h4>Star Rating: <%= @review.star_rating %></h4>
-
+        <img src= "<%= @review.book.image %>" height="10%", width="10%">
+        <hr />
+        
         <p>Review: <%= @review.book_review %></p><br>
         <hr />
-        By: <%= @review.reader.username %>
-
+        By: <%= @review.reader.username %><br>
+        <img src= "<%= (url_for(@review.reader.profile_pic)) %>" alt="profile pic" height="150", width="100"><br>
         <p>Status: <%= @review.status %></p><br>
         <hr />
         
