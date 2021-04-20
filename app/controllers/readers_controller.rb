@@ -7,7 +7,7 @@ class ReadersController < ApplicationController
     def create
        @reader = Reader.new(reader_params)
         if @reader.save 
-            flash[:success] = "Welcome to bookface!"
+            session[:reader_id] = @reader.id
             redirect_to @reader
         else
             @reader.errors.full_messages

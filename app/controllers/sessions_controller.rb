@@ -3,6 +3,8 @@ class SessionsController < ApplicationController
     
   end
 
+  def home
+  end
 
   def create
     reader = Reader.find_by(username: params[:session][:username])

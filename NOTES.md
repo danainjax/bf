@@ -3,8 +3,8 @@ Build List
 1. Fix Readme in md format to reader friendly view
 2. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
 3. Test and see if login/out signup routes are meeting project specs, conditional rendering in layouts_header is not behaving as expected. Code in Sessions Module seems to be faulty?
-4. Home page
-5. Navbar
+4. Add link_to My Reviews, link_to books on Profile page
+
 
 
 
