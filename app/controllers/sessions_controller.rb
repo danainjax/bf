@@ -8,19 +8,40 @@ class SessionsController < ApplicationController
     
   end
 
-  # def omniauth
-  #   reader = Reader.find_or_create_by(uid: request.env['omniauth.auth'][:uid], provider: )
-  #     r.username = request.env['omniauth.auth'][:info][:email]
-  #     r.email = request.env['omniauth.auth'][:info][:email]
-  #     r.password = SecureRandom.hex(15)
-  #   end 
-  #   if reader.valid?
-  #     session[:reader_id] = reader.id
-  #     redirect_to 'root'
-  #   else
-  #     redirect_to login_path
-  #   end
-  # end
+  def facebook
+    @reader = Reader.find_or_create_by(uid: auth["uid"]) do |r|
+      r.username = auth['info']['name']
+      r.email = auth['info']['email']
+      r.profile_pic = auth['info']['image']
+    end
+
+    session[:reader_id] = @reader.id
+
+    render :home
+  end
+
+  
+
+  def auth
+    request.env['omniauth.auth']
+  end
+
+  def omniauth
+    byebug
+    reader = Reader.find_or_create_by(uid: request.env['omniauth.auth'][:uid], provider: request.env['omniauth.auth'][:provider]) do |r|
+      r.username = request.env['omniauth.auth'][:info][:first_name]
+      r.email = request.env['omniauth.auth'][:info][:email]
+      r.password = SecureRandom.hex(15)
+    end 
+    
+    if reader.valid?
+      session[:reader_id] = reader.id
+      redirect_to root_path
+    else
+      redirect_to login_path
+    end
+  end
+
 
   #this is logging in
   def create
