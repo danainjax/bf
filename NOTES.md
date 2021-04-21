@@ -12,11 +12,11 @@ Sprint 1 - Validations and Errors
 - [ ] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new)
 
-Sprint 2 -Sign in Out and Up
-- [ ] Include signup (how e.g. Devise)
-- [ ] Include login (how e.g. Devise)
-- [ ] Include logout (how e.g. Devise)
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
+- [X]Sprint 2 -Sign in Out and Up
+- [X] Include signup (how e.g. Devise)
+- [X] Include login (how e.g. Devise)
+- [X] Include logout (how e.g. Devise)
+- [X] Include third party signup/login (how e.g. Devise/OmniAuth) (Google)
 
 Sprint 3 - Routes
 - [X] Include nested resource show or index (URL e.g. users/2/recipes)

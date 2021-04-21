@@ -34,7 +34,8 @@ Specs:
 - [X] Include signup (how e.g. Devise) /signup
 - [X] Include login (how e.g. Devise)/login
 - [X] Include logout (how e.g. Devise) destroy method in sessions controller
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
+- [X] Include third party signup/login (how e.g. Devise/OmniAuth)
+	Login with Google is implemented
 - [X] Include nested resource show or index (URL e.g. users/2/recipes)
 	reviews are nested under books,  books/1/reviews  (index route)
 	reviews are nested under readers, readers/1/reviews (index route)
