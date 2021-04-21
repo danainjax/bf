@@ -9,7 +9,7 @@ class ReadersController < ApplicationController
        reader = Reader.new(reader_params)
         if reader.save 
             session[:reader_id] = reader.id
-            redirect_to reader
+            redirect_to reader_path(reader)
         else
             reader.errors.full_messages
             render 'new'
