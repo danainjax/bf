@@ -20,5 +20,5 @@ Genre: <%= @book.genre %><br>
 <hr>
 <%= link_to "Buy From Amazon",  @book.link_to_purchase, :target => "_blank" %><br>
 <%= link_to "edit", edit_book_path(@book) %><br>
-<%= link_to "review", new_review_path(@book[:id]) %>
+<%= link_to "review", new_book_review_path(@book) %>
 <hr />
