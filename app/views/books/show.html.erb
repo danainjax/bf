@@ -7,6 +7,17 @@ Publisher: <%= @book.publisher %><br>
 Description: <%= @book.description %><br><br>
 Genre: <%= @book.genre %><br>
 <img src= "<%= @book.image %>" height ="329" width "500" ><br>
+
+<% if @book.reviews.any? %>
+    <hr>
+    <h2> Reviews</h2>
+    <%  @book.reviews.each do |review|  %>
+        <li><%= review.book_review %>
+        <%= review.star_rating %>
+        <%= review.reader.username %></li>
+    <%end%>
+<% end %>
+<hr>
 <%= link_to "Buy From Amazon",  @book.link_to_purchase, :target => "_blank" %><br>
 <%= link_to "edit", edit_book_path(@book) %><br>
 <%= link_to "review", new_review_path(@book[:id]) %>

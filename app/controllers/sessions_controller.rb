@@ -9,15 +9,20 @@ class SessionsController < ApplicationController
   end
 
   def facebook
-    @reader = Reader.find_or_create_by(uid: auth["uid"]) do |r|
-      r.username = auth['info']['name']
-      r.email = auth['info']['email']
-      r.profile_pic = auth['info']['image']
-    end
+    # byebug
+    @reader = Reader.find_or_create_by(email: auth["info"]["email"]) do |r|
+        r.username = auth['info']['name']
+        r.email = auth['info']['email']
+        r.profile_pic = auth['info']['image']
+        r.password = SecureRandom.hex(15)
+      end
+      if @reader.save
+        session[:reader_id] = @reader.id
+      redirect_to reader_path(@reader)
+      else
+        redirect_to '/login'
+      end
 
-    session[:reader_id] = @reader.id
-
-    render :home
   end
 
   

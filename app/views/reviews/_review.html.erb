@@ -1,8 +1,11 @@
+
 <%= form_with model: @review  do |f| %>
 
-  <%= f.label 'Title:' %><br>
-  <!-- <%= f.hidden_field :book_id, :value => @review.book_id %> -->
+
+  
+   <!--<%= f.hidden_field :book_id, :value => @book.id %> -->
   <%= f.collection_select :book_id, Book.all, :id, :title %><br>
+  
 
   <%= f.label 'Book review:' %><br>
   <%= f.text_area :book_review %><br>
@@ -12,7 +15,9 @@
 
   <hr />
 
-  <%= f.label 'Reviewed by:' %><br>
+  <!--<%= f.label 'Current_reader:' %><br>
+  <%= current_reader.username %>-->
+  <!--<%= f.hidden_field :reader_id, :value => current_reader.id %> <br><br>-->
   <%= f.collection_select :reader_id, Reader.all, :id, :username %><br>
 
   <%= f.label :status %><br>
