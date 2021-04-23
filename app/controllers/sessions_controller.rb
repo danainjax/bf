@@ -63,8 +63,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-   session.delete :reader_id
-   redirect_to login_path
+    session.delete(:reader_id)
+    current_reader = nil
+    redirect_to root_path
   end
 
   private

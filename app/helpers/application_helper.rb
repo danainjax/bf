@@ -12,9 +12,6 @@ module ApplicationHelper
         current_reader
     end
 
-    def log_out
-        session.delete(:reader_id)
-        @current_reader = nil
-    end
+    
 
 end
