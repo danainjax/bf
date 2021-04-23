@@ -2,7 +2,7 @@ Build List
 -----------
 1. Fix Readme in md format to reader friendly view
 2. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
-3. Test and see if login/out signup routes are meeting project specs, conditional rendering in layouts_header is not behaving as expected. Code in Sessions Module seems to be faulty?
+3. Test and see if login/out signup routes are meeting project specs, conditional rendering in layouts_header is not behaving as expected. Code in Sessions Module / check
 4. Add link_to book on the reviews/show page
 
 
@@ -16,7 +16,7 @@ Sprint 1 - Validations and Errors
 - [X] Include signup (how e.g. Devise)
 - [X] Include login (how e.g. Devise)
 - [X] Include logout (how e.g. Devise)
-- [X] Include third party signup/login (how e.g. Devise/OmniAuth) (Google)
+- [X] Include third party signup/login (how e.g. Devise/OmniAuth) (Google) & (Facebook)
 
 Sprint 3 - Routes
 - [X] Include nested resource show or index (URL e.g. users/2/recipes)
@@ -31,7 +31,7 @@ Sprint 4 - Refactoring/DRY
 - [ ] Views use helper methods if appropriate
 - [ ] Views use partials if appropriate
 
-Sprint 5 - How Does it Look?
+Sprint 5 - How Does it Look?/Facelift
 - [ ]   Bootstrap
 - [ ]   Styling
 - [ ]   Wireframing

@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  # skip_before_action :verify_authenticity_token, only: :create
   def new #renders the login form, does not create a new object
     # if logged_in?
     #   redirect_to 'root'
@@ -27,21 +28,19 @@ class SessionsController < ApplicationController
 
   
 
-  def auth
-    request.env['omniauth.auth']
-  end
+  
 
   def omniauth
     
-    reader = Reader.find_or_create_by(uid: request.env['omniauth.auth'][:uid], provider: request.env['omniauth.auth'][:provider]) do |r|
+    @reader = Reader.find_or_create_by(uid: request.env['omniauth.auth'][:uid], provider: request.env['omniauth.auth'][:provider]) do |r|
       r.username = request.env['omniauth.auth'][:info][:first_name]
       r.email = request.env['omniauth.auth'][:info][:email]
       r.password = SecureRandom.hex(15)
     end 
     
-    if reader.valid?
-      session[:reader_id] = reader.id
-      redirect_to books_path
+    if @reader.valid?
+      session[:reader_id] = @reader.id
+      redirect_to @reader
     else
       redirect_to login_path
     end
@@ -68,5 +67,9 @@ class SessionsController < ApplicationController
    redirect_to login_path
   end
 
-  
+  private
+  #auth hash, environment hash, omniauth.auth is the key
+  def auth
+    request.env['omniauth.auth']
+  end 
 end
