@@ -10,7 +10,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
     <%= render 'layouts/header' %>
-     
+     <% flash.each do |name, msg| -%>
+     <h3> <%= content_tag :div, msg, class: name %><h3>
+    <% end -%>
   </head>
 
   <body>
