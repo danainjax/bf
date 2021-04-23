@@ -65,6 +65,7 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:reader_id)
     current_reader = nil
+    flash[:notice] = "You have successfully logged out of bookface. Your books are saved."
     redirect_to root_path
   end
 
