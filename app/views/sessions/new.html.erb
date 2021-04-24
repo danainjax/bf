@@ -11,9 +11,10 @@
     <%= f.submit "Log in"%>
     
 <% end %>
-<h3> Or Login with Google</h3>
+<h3> Or </h3>
     <p><%= button_to "Log in with Google", '/auth/google_oauth2'  %></p>
     <p><%= button_to "Log in with Facebook", '/auth/facebook'  %></p>
-<div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
+
 
 <p> New reader? <%= link_to "Sign up", signup_path %>
