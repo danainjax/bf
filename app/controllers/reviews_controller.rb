@@ -11,14 +11,11 @@ class ReviewsController < ApplicationController
     end
     
     def create
-        #byebug
-    #    @book = Book.find_by(params[:book_id])
-        if params[:book_id]
-            @review = Book.find(params[:book_id]).build(review_params)
-        else
             @review = Review.new(review_params)
-            @review.save
-        redirect_to review_path(@review)
+             if @review.save
+                redirect_to review_path(@review)
+             else
+                render 'new'
         end
     end
     
@@ -36,12 +33,16 @@ class ReviewsController < ApplicationController
     
     def edit
         @review = Review.find_by_id(params[:id])
+        
     end
     
     def update
         @review = Review.find_by_id(params[:id])
-        @review.update(review_params)
-        redirect_to review_path(@review)
+        if @review.update(review_params)
+            redirect_to review_path(@review)
+        else
+            render :edit
+        end
     end
     
     def destroy

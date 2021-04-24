@@ -30,6 +30,10 @@ Specs:
 	Review_status (select from “want to read”, “currently reading”, “read”, either collection select or check boxes)
 
 - [ ] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
+	Reviews- minimum and max length
+	Reader -
+	Book -
+	
 - [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
 - [X] Include signup (how e.g. Devise) /signup
 - [X] Include login (how e.g. Devise)/login
@@ -40,8 +44,10 @@ Specs:
 	reviews are nested under books,  books/1/reviews  (index route)
 	reviews are nested under readers, readers/1/reviews (index route)
 - [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
+	books/2/reviews/new
 	reviews are nested under books, books/12/reviews/new
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
+- [X] Include form display of validation errors (form URL e.g. /recipes/new) 
+	error messages are in the views (example: the partial _reader.html handles error messages for new and edit pages for readers)
 
 Confirm:
 - [ ] The application is pretty DRY

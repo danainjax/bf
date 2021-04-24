@@ -6,13 +6,13 @@ class ReadersController < ApplicationController
 
     #this is the signup action
     def create
-       reader = Reader.new(reader_params)
-        if reader.save 
-            session[:reader_id] = reader.id
-            redirect_to reader_path(reader)
+       @reader = Reader.new(reader_params)
+        if @reader.save 
+            session[:reader_id] = @reader.id
+            redirect_to reader_path(@reader)
         else
-            reader.errors.full_messages
-            render 'new'
+            # reader.errors.full_messages
+            render :new
         end
     end
 
@@ -27,8 +27,11 @@ class ReadersController < ApplicationController
 
     def update
         @reader = Reader.find_by_id(params[:id])
-        @reader.update(reader_params)
-        redirect_to reader_path(@reader)
+        if @reader.update(reader_params)
+            redirect_to reader_path(@reader)
+        else
+            render :edit
+        end
     end
 
     def destroy

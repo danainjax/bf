@@ -11,15 +11,15 @@ class SessionsController < ApplicationController
 
   def facebook
     # byebug
-    @reader = Reader.find_or_create_by(email: auth["info"]["email"]) do |r|
+    reader = Reader.find_or_create_by(email: auth["info"]["email"]) do |r|
         r.username = auth['info']['name']
         r.email = auth['info']['email']
         r.profile_pic = auth['info']['image']
-        r.password = SecureRandom.hex(15)
+        r.password = SecureRandom.hex(12)
       end
-      if @reader.save
-        session[:reader_id] = @reader.id
-      redirect_to reader_path(@reader)
+      if reader.save
+        session[:reader_id] = reader.id
+      redirect_to reader_path(reader)
       else
         redirect_to '/login'
       end
@@ -32,15 +32,15 @@ class SessionsController < ApplicationController
 
   def omniauth
     
-    @reader = Reader.find_or_create_by(uid: request.env['omniauth.auth'][:uid], provider: request.env['omniauth.auth'][:provider]) do |r|
+    reader = Reader.find_or_create_by(uid: request.env['omniauth.auth'][:uid], provider: request.env['omniauth.auth'][:provider]) do |r|
       r.username = request.env['omniauth.auth'][:info][:first_name]
       r.email = request.env['omniauth.auth'][:info][:email]
-      r.password = SecureRandom.hex(15)
+      r.password = SecureRandom.hex(12)
     end 
     
-    if @reader.valid?
-      session[:reader_id] = @reader.id
-      redirect_to @reader
+    if reader.save
+      session[:reader_id] = reader.id
+      redirect_to reader
     else
       redirect_to login_path
     end
