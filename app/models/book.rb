@@ -3,7 +3,8 @@ class Book < ApplicationRecord
     has_many :readers, through: :reviews 
     
     
-    validates :title, presence: true, uniqueness: true
+    validates :title, presence: true, uniqueness: { case_sensitive: false }
+    #find a way to make this validation not case sensitive
     validates :author, presence: true
 
     def self.get_hardcover_fiction
