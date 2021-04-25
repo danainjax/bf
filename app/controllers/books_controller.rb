@@ -5,9 +5,13 @@ class BooksController < ApplicationController
     end
 
     def create
+        # byebug
        @book = Book.new(book_params)
-        if @book.save 
+        @book.save 
+        if @book.save
             redirect_to book_path(@book)
+        else
+            render 'new'
         end
     end
 
