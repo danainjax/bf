@@ -6,7 +6,9 @@ a. Clean up reviews view to a user friendly experience.
 3. Add link_to book on the reviews/show page
 4. Check why profile pic is not coming thru in sessions controller facebook method.
 5. Build scope method to group reviews index by book title
-6. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
+6. Protect data from being accessed or created unless a reader is logged in. Prevent other readers from updating or accessing a reader's profile.
+7. Helper methods
+8. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
 
 
 
