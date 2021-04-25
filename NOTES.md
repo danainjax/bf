@@ -3,16 +3,18 @@ Build List
 1. Fix Readme in md format to reader friendly view
 2. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
 3. Add link_to book on the reviews/show page
-4. Check to make sure readers with the same username can't login just by virtue of their username, check omniauth code and facebook code in sessions controller. Possible bug.
-5. Check why profile pic is not coming thru in sessions controller facebook method.
+4. Check why profile pic is not coming thru in sessions controller facebook method.
+5. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
 
 
 
 
-Sprint 1 - Validations and Errors
-- [ ] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
-    Validations for Reviews - minimum and maximum length
-    Reader-
+- [X]Sprint 1 - Validations and Errors
+- [X] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
+    Reviews- minimum and max length, star rating and status required 
+	Reader - username, email (uniqueness and presence), password length
+	Book - title uniqueness, author presence
+
 - [X] Include form display of validation errors (form URL e.g. /recipes/new) error messages are in the views (example: the partial _reader.html handles error messages for new and edit pages for readers, same for reviews _review handles error messages for reviews)
 
 - [X]Sprint 2 -Sign in Out and Up

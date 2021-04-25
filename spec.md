@@ -29,12 +29,13 @@ Specs:
 	Review.star_rating (select 1-5, either collection select or check boxes)
 	Review_status (select from “want to read”, “currently reading”, “read”, either collection select or check boxes)
 
-- [ ] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
-	Reviews- minimum and max length
-	Reader -
-	Book -
-	
-- [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+- [X] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
+	Reviews- minimum and max length, star rating and status required 
+	Reader - username, email (uniqueness and presence), password length
+	Book - title uniqueness, author presence
+
+- [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+	Alphabetized the books index  books.alpha  books/alpha
 - [X] Include signup (how e.g. Devise) /signup
 - [X] Include login (how e.g. Devise)/login
 - [X] Include logout (how e.g. Devise) destroy method in sessions controller

@@ -36,7 +36,7 @@ class BooksController < ApplicationController
             if params[:title]
                 @books = Book.where('title LIKE ?', "%#{params[:title].upcase}%")
             else
-                @books = Book.all
+                @books = Book.all.alpha
             end
        
     end

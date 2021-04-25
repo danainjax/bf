@@ -4,8 +4,10 @@ class Book < ApplicationRecord
     
     
     validates :title, presence: true, uniqueness: { case_sensitive: false }
-    #find a way to make this validation not case sensitive
     validates :author, presence: true
+
+    scope :alpha, ->{order('title')}
+
 
     def self.get_hardcover_fiction
         response = RestClient.get("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=#{ENV["KEY"]}")
