@@ -11,6 +11,6 @@
 
 <% @books.each do |book| %>
 <p>
-    <%= link_to book.title, book_path(book[:id]) %>
+    <%= link_to book.title.upcase, book_path(book[:id]) %>
 </p>
 <% end %>
