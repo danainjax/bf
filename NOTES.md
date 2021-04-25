@@ -1,12 +1,12 @@
 Build List
 -----------
+a. Clean up reviews view to a user friendly experience.
 1. Fix Readme in md format to reader friendly view
 2. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
 3. Add link_to book on the reviews/show page
 4. Check why profile pic is not coming thru in sessions controller facebook method.
 5. Build scope method to group reviews index by book title
-6. When creating a new book, upcase it so when scoping it shows up clean and finds in the search field.
-7. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
+6. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
 
 
 
