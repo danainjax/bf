@@ -4,7 +4,9 @@ Build List
 2. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
 3. Add link_to book on the reviews/show page
 4. Check why profile pic is not coming thru in sessions controller facebook method.
-5. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
+5. Build scope method to group reviews index by book title
+6. When creating a new book, upcase it so when scoping it shows up clean and finds in the search field.
+7. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
 
 
 
@@ -23,12 +25,13 @@ Build List
 - [X] Include logout (how e.g. Devise)
 - [X] Include third party signup/login (how e.g. Devise/OmniAuth) (Google) & (Facebook)
 
-Sprint 3 - Routes
+- [X]Sprint 3 - Routes
 - [X] Include nested resource show or index (URL e.g. users/2/recipes)
     nested reviews under books and under readers, ex: readers/1/reviews , books/1/reviews (index route)
 - [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
     books/10/reviews/new
-- [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+- [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+    added alphabetize to books index, books/alpha   books.alpha
 
 Sprint 4 - Refactoring/DRY
 - [ ] The application is pretty DRY
