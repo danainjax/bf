@@ -7,7 +7,7 @@ class Book < ApplicationRecord
     validates :author, presence: true
 
     scope :alpha, ->{order('title')}
-
+    scope :five_star, ->{joins(:reviews).group("AVG(reviews.star_rating)")}
 
     def self.get_hardcover_fiction
         response = RestClient.get("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=#{ENV["KEY"]}")
