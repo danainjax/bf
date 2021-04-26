@@ -1,5 +1,6 @@
 Build List
 -----------
+aa. Add link/button to delete/destroy book or review or profile/reader
 a. Clean up reviews view to a user friendly experience.
 1. Fix Readme in md format to reader friendly view
 2. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
@@ -43,7 +44,7 @@ Sprint 4 - Refactoring/DRY
 - [ ] Views use partials if appropriate
 
 Sprint 5 - How Does it Look?/Facelift
-- [ ]   Bootstrap
+- [X]   Bootstrap- added basic bootstrap
 - [ ]   Styling
 - [ ]   Wireframing
 - [ ]   bf logo
