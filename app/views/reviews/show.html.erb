@@ -1,5 +1,5 @@
 <div>
-        <h2><%= @review.book.title%></h2>
+        <h2><%= link_to @review.book.title, book_path(@review.book.id) %></h2>
         <h4>Star Rating: <%= @review.star_rating %></h4>
         <img src= "<%= @review.book.image %>" height="10%", width="10%">
         <hr />

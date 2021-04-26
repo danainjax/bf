@@ -1,10 +1,9 @@
 Build List
 -----------
 aa. Add link/button to delete/destroy book or review or profile/reader
-a. Clean up reviews view to a user friendly experience.
-1. Fix Readme in md format to reader friendly view
-2. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
-3. Add link_to book on the reviews/show page
+1. Clean up reviews view to a user friendly experience.
+2. Fix Readme in md format to reader friendly view
+3. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
 4. Check why profile pic is not coming thru in sessions controller facebook method.
 5. Build scope method to group reviews index by book title
 5a. Build scope method to show Top 5 Reviews or 5 star reviews, or Top 5 Books based on reviews.
@@ -48,7 +47,7 @@ Sprint 5 - How Does it Look?/Facelift
 - [ ]   Styling
 - [ ]   Wireframing
 - [ ]   bf logo
-- [ ]   Nav bar
+- [X]   Nav bar
 
 Sprint 6 - Instructor Review and Feedback Prior to Project Review
 - [ ]   Schedule meeting with Aysan to go through App and write notes on what needs to be fixed
