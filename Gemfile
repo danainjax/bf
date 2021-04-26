@@ -29,6 +29,8 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 gem 'omniauth-facebook'
 gem 'thin'
+gem 'bootstrap', '~> 5.0.0.beta3'
+gem 'pry'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

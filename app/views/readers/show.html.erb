@@ -15,9 +15,18 @@ Favorite Book: <%= @reader.favorite_book %><br><br>
 
 <% @reviews = current_reader.reviews %>
 <% @reviews.each do |review| %>
-    <li> <%= link_to review.book.title, review_path(review) %><br>
-    <img src= "<%= review.book.image %>" height ="100" width "75" ><br>
-    <em><%= review.status %></em><br><br></li>
+<p>     
+        <div class="card" style="width: 10rem;">
+        <img src= "<%= review.book.image%>" class="card-img-top" alt="test">
+        <div class="card-body">
+            <p class="card-text"><%= link_to review.book.title, review_path(review) %><br>
+            <em><%= review.status %></em>
+            </p>
+        </div>
+        </div>
+            
+   </p> 
+    
 <% end %>
  <hr />
 

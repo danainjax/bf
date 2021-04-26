@@ -1,3 +1,4 @@
+<center>
 <h3> Search titles </h3>
 
 
@@ -10,7 +11,15 @@
 
 
 <% @books.each do |book| %>
-<p>
-    <%= link_to book.title.upcase, book_path(book[:id]) %>
-</p>
+
+   <p>     
+        <div class="card" style="width: 10rem;">
+        <img src= "<%= book.image%>" class="card-img-top" alt="test">
+        <div class="card-body">
+            <p class="card-text"><%= link_to book.title.upcase, book_path(book[:id]) %></p>
+        </div>
+        </div>
+            
+   </p> 
 <% end %>
+</center>
