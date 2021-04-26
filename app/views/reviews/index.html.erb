@@ -1,11 +1,18 @@
 <% @reviews.each do |review| %>
-    
-   <ul> 
 
-          <li>  Reader Id: <%= review.reader_id %> Title: <%= review.book.title %>- book id: <%= review.book_id %><br>
-            Review: <%= review.book_review %>- id: <%= review.id %> </li>
-      
-        
-   </ul>
-   
+   <p>     
+        <div class="card" style="width: 10rem;">
+        <img src= "<%= review.book.image%>" class="card-img-top" alt="test">
+        <div class="card-body">
+            <p class="card-text"><%= link_to review.book.title.upcase, book_reviews_path(review) %><br>
+            <%= review.book_review %><br>
+            -<%= review.reader.username %>
+            </p>
+        </div>
+        </div>
+            
+   </p> 
 <% end %>
+
+
+
