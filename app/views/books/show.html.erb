@@ -1,6 +1,9 @@
 <h1><%= @book.title.upcase %> </h1>
-<hr>
 
+<hr>
+<%= link_to "Buy From Amazon",  @book.link_to_purchase, :target => "_blank" %><br>
+<%= link_to "edit", edit_book_path(@book) %><br>
+<%= link_to "review", new_book_review_path(@book) %><br>
 Author: <%= @book.author %><br>
 Published: <%= @book.published %><br>
 Publisher: <%= @book.publisher %><br>
@@ -30,7 +33,4 @@ Genre: <%= @book.genre %><br><br>
         <% end %>
 <% end %>
 <hr>
-<%= link_to "Buy From Amazon",  @book.link_to_purchase, :target => "_blank" %><br>
-<%= link_to "edit", edit_book_path(@book) %><br>
-<%= link_to "review", new_book_review_path(@book) %>
-<hr />
+

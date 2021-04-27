@@ -1,19 +1,25 @@
 Build List
 -----------
-- How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
-- style reader profile info on readers show page
-- style reviews show page similar to books show page (user card)
+VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
+1. reader validations, how to allow google and facebook login that doesn't get trapped by validations?
+2. Check why profile pic is not coming thru in sessions controller facebook method.
+HTML/CSS LAYOUT
+1. How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
+2. style reader profile info on readers show page
 
-aa. Add link/button to delete/destroy book or review or profile/reader
-1. Clean up reviews view to a user friendly experience.
-2. Fix Readme in md format to reader friendly view
-3. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
-4. Check why profile pic is not coming thru in sessions controller facebook method.
-5. Build scope method to group reviews index by book title
-5a. Build scope method to show Top 5 Reviews or 5 star reviews, or Top 5 Books based on reviews.
-6. Protect data from being accessed or created unless a reader is logged in. Prevent other readers from updating or accessing a reader's profile.
-7. Helper methods
-8. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
+CRUD ACTIONS
+1. Add link/button to delete/destroy book or review or profile/reader
+README
+1. Fix Readme in md format to reader friendly view
+ADD API CALL AND SEED DATABASE
+1. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
+SCOPE/ROUTE
+1. Build scope method to group reviews index by book title
+2. Build scope method to show Top 5 Reviews or 5 star reviews, or Top 5 Books based on reviews.
+HELPER METHODS
+1. Protect data from being accessed or created unless a reader is logged in. Prevent other readers from updating or accessing a reader's profile. Helper methods
+FEATURE REQUEST
+1. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
 
 
 

@@ -4,7 +4,7 @@
         <div class="card" style="width: 10rem;">
         <img src= "<%= review.book.image%>" class="card-img-top" alt="test">
         <div class="card-body">
-            <p class="card-text"><%= link_to review.book.title.upcase, book_reviews_path(review) %><br>
+            <p class="card-text"><%= link_to review.book.title, book_path(review.book.id) %><br>
             <%= review.book_review %><br>
             -<%= review.reader.username %>
             </p>

@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
         r.profile_pic = auth['info']['image']
         r.password = SecureRandom.hex(12)
       end
-      if reader.save
+      if reader.valid?
         session[:reader_id] = reader.id
       redirect_to reader_path(reader)
       else
@@ -38,7 +38,7 @@ class SessionsController < ApplicationController
       r.password = SecureRandom.hex(12)
     end 
     
-    if reader.save
+    if reader.valid?
       session[:reader_id] = reader.id
       redirect_to reader
     else
