@@ -1,14 +1,16 @@
 Build List
 -----------
-VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
+A. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
 1. facebook login (profile_pic attribute not coming thru, commented out) , cannot log in with google after successfully logging in with facebook. Check error messages on reader.errors.full_messages with a binding.pry  (able to get two different accounts/but now hypothesis is failing validations)
 2. Check why profile pic is not coming thru in sessions controller facebook method.
-HTML/CSS LAYOUT
+__________________________
+B. HTML/CSS LAYOUT
 1. How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
 2. style reader profile info on readers show page
-
-CRUD ACTIONS
+_____________________________
+C. CRUD ACTIONS
 1. Add link/button to delete/destroy book or review or profile/reader
+_____________________________
 README
 1. Fix Readme in md format to reader friendly view
 ADD API CALL AND SEED DATABASE
