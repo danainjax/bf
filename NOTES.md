@@ -14,8 +14,7 @@ README
 ADD API CALL AND SEED DATABASE
 1. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
 SCOPE/ROUTE
-1. Build scope method to group reviews index by book title
-2. Build scope method to show Top 5 Reviews or 5 star reviews, or Top 5 Books based on reviews.
+1. Build scope method to group reviews index by five_star reviews 
 HELPER METHODS
 1. Protect data from being accessed or created unless a reader is logged in. Prevent other readers from updating or accessing a reader's profile. Helper methods
 FEATURE REQUEST
