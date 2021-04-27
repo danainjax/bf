@@ -1,5 +1,9 @@
 Build List
 -----------
+- How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
+- style reader profile info on readers show page
+- style reviews show page similar to books show page (user card)
+
 aa. Add link/button to delete/destroy book or review or profile/reader
 1. Clean up reviews view to a user friendly experience.
 2. Fix Readme in md format to reader friendly view

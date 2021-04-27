@@ -1,18 +1,21 @@
+<h2><%= link_to @review.book.title, book_path(@review.book.id) %></h2>
+
+<img src= "<%= @review.book.image %>" height="15%", width="15%">
+        <hr />
+        <p>     
+                <div class="card" style="width: 10rem;">
+                <img src= "/images/bf.jpeg" class="card-img-top" alt="test">
+                <div class="card-body">
+                    <p class="card-text">
+                        <h3><%= @review.star_rating %></h3>
+                        <em><%= @review.book_review %></em>
+                        <%= @review.reader.username %><br><br>
+                        <%= @review.status %><br>
+                        <%= link_to "edit", edit_review_path %><br>
+                       </p>
+                </div>
+                </div>
+                    
+        </p> 
 
 
-<div>
-        <h2><%= link_to @review.book.title, book_path(@review.book.id) %></h2>
-        <h4>Star Rating: <%= @review.star_rating %></h4>
-        <img src= "<%= @review.book.image %>" height="10%", width="10%">
-        <hr />
-        
-        <p>Review: <%= @review.book_review %></p><br>
-        <hr />
-        By: <%= @review.reader.username %><br>
-        
-        <p>Status: <%= @review.status %></p><br>
-        <hr />
-        
-        <%= link_to "edit", edit_review_path %><br> 
-        
-    </div>
