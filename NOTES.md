@@ -1,7 +1,7 @@
 Build List
 -----------
 VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
-1. reader validations, how to allow google and facebook login that doesn't get trapped by validations?
+1. reader validations, facebook login that doesn't get trapped by validations?
 2. Check why profile pic is not coming thru in sessions controller facebook method.
 HTML/CSS LAYOUT
 1. How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)

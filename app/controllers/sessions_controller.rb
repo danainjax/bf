@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
         r.profile_pic = auth['info']['image']
         r.password = SecureRandom.hex(12)
       end
+      binding.pry
       if reader.valid?
         session[:reader_id] = reader.id
       redirect_to reader_path(reader)
@@ -33,9 +34,10 @@ class SessionsController < ApplicationController
   def omniauth
     
     reader = Reader.find_or_create_by(uid: request.env['omniauth.auth'][:uid], provider: request.env['omniauth.auth'][:provider]) do |r|
+      
       r.username = request.env['omniauth.auth'][:info][:first_name]
       r.email = request.env['omniauth.auth'][:info][:email]
-      r.password = SecureRandom.hex(12)
+      r.password = SecureRandom.hex(6)
     end 
     
     if reader.valid?
