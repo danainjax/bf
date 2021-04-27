@@ -1,7 +1,8 @@
 Build List
 -----------
 A. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
-1. facebook login (profile_pic attribute not coming thru, commented out) , cannot log in with google after successfully logging in with facebook. Check error messages on reader.errors.full_messages with a binding.pry  (able to get two different accounts/but now hypothesis is failing validations)
+1. facebook login (profile_pic attribute not coming thru, commented out) - able to login with google if email address is not danainjax@ gmail.com (not existing email address)
+
 2. Check why profile pic is not coming thru in sessions controller facebook method.
 __________________________
 B. HTML/CSS LAYOUT

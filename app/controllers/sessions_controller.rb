@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
       # binding.pry
       if reader.valid?
         session[:reader_id] = reader.id
+        flash[:message] = "You have successfully logged in with facebook"
       redirect_to reader_path(reader)
       else
         redirect_to '/login'
@@ -39,9 +40,10 @@ class SessionsController < ApplicationController
       r.email = request.env['omniauth.auth'][:info][:email]
       r.password = SecureRandom.hex(6)
     end 
-   
+  #  binding.pry
     if reader.valid?
       session[:reader_id] = reader.id
+      flash[:message] = "You have successfully logged in with Google"
       redirect_to reader
     else
       redirect_to login_path
