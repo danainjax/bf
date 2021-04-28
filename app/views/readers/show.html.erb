@@ -3,6 +3,7 @@
 
 <hr>
 <%= link_to "edit", edit_reader_path(@reader) %><br>
+<%= button_to "Delete Reader Profile/Account", reader_path(@reader), method: :delete %>
 Username: <%= @reader.username%><br>
 Name: <%= @reader.first_name %> <%= @reader.last_name %><br>
 Email: <%= @reader.email %><br>

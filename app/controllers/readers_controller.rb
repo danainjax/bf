@@ -35,8 +35,10 @@ class ReadersController < ApplicationController
     end
 
     def destroy
+        @reader = Reader.find_by_id(params[:id])
         @reader.destroy
-        redirect_to reader_path(@reader)
+        session.clear
+        redirect_to root_path
     end
 
 

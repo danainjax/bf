@@ -10,6 +10,7 @@ Publisher: <%= @book.publisher %><br>
 Description: <%= @book.description %><br>
 Genre: <%= @book.genre %><br><br>
 <img src= "<%= @book.image %>" height ="329" width "500" ><br>
+<%= button_to "Delete Book", book_path(@book), method: :delete %>
 
 <% if @book.reviews.any? %>
     <hr>

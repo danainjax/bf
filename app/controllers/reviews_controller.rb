@@ -1,7 +1,11 @@
 class ReviewsController < ApplicationController
     def new
         # byebug
-        @review = Review.new(book_id: params[:book_id])
+        if params[:book_id]
+            @review = Review.new(book_id: params[:book_id])
+        else
+            @review = Review.new
+        end
         # @book = Book.find_by(params[:book_id])
     end
     
@@ -49,6 +53,7 @@ class ReviewsController < ApplicationController
     def destroy
         @review = Review.find_by_id(params[:id])
         @review.destroy
+        redirect_to reviews_path
     end
     
     private

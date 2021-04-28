@@ -39,9 +39,12 @@ class SessionsController < ApplicationController
       r.username = request.env['omniauth.auth'][:info][:first_name]
       r.email = request.env['omniauth.auth'][:info][:email]
       r.password = SecureRandom.hex(6)
+      # binding.pry
+      r.profile_pic = request.env['omniauth.auth'][:info][:image]
+      
     end 
-  #  binding.pry
-    if reader.valid?
+   
+    if reader.save
       session[:reader_id] = reader.id
       flash[:message] = "You have successfully logged in with Google"
       redirect_to reader

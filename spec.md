@@ -36,6 +36,8 @@ Specs:
 
 - [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
 	Alphabetized the books index  books.alpha  books/alpha
+- [ ] Add route to scope method
+
 - [X] Include signup (how e.g. Devise) /signup
 - [X] Include login (how e.g. Devise)/login
 - [X] Include logout (how e.g. Devise) destroy method in sessions controller

@@ -12,6 +12,7 @@
                         <%= @review.reader.username %><br><br>
                         <%= @review.status %><br>
                         <%= link_to "edit", edit_review_path %><br>
+                        <%= button_to "Delete Review", review_path(@review), method: :delete %>
                        </p>
                 </div>
                 </div>

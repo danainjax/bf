@@ -1,25 +1,28 @@
 Build List
 -----------
-A. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
-1. facebook login (profile_pic attribute not coming thru, commented out) - able to login with google if email address is not danainjax@ gmail.com (not existing email address)
+_____________________________
+A. HELPER METHODS
+1. Protect data from being accessed/created/destroyed unless a reader is logged in and the data belongs to them. Prevent other readers from updating or accessing a reader's profile. <<Helper methods>>
+______________________________
+B. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
+1. facebook login (profile_pic attribute not coming thru, commented out) - able to login with google if email address is not danainjax@ gmail.com (not existing email address) See if can add an or statment to the validation or add a custom validator for FB and Google
 
 2. Check why profile pic is not coming thru in sessions controller facebook method.
 __________________________
-B. HTML/CSS LAYOUT
+D. HTML/CSS LAYOUT
 1. How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
 2. style reader profile info on readers show page
 _____________________________
-C. CRUD ACTIONS
-1. Add link/button to delete/destroy book or review or profile/reader
-_____________________________
+E. ADD API CALL AND SEED DATABASE
+1. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
+______________________________
+F. SCOPE/ROUTE
+1. Build scope method to group reviews index by five_star reviews 
+______________________________
 README
 1. Fix Readme in md format to reader friendly view
-ADD API CALL AND SEED DATABASE
-1. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
-SCOPE/ROUTE
-1. Build scope method to group reviews index by five_star reviews 
-HELPER METHODS
-1. Protect data from being accessed or created unless a reader is logged in. Prevent other readers from updating or accessing a reader's profile. Helper methods
+
+
 FEATURE REQUEST
 1. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
 
