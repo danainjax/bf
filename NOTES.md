@@ -1,5 +1,5 @@
 Build List
------------
+
 _____________________________
 A. HELPER METHODS
 1. Protect data from being accessed/created/destroyed unless a reader is logged in and the data belongs to them. Prevent other readers from updating or accessing a reader's profile. <<Helper methods>>
@@ -12,6 +12,7 @@ __________________________
 D. HTML/CSS LAYOUT
 1. How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
 2. style reader profile info on readers show page
+3. Style Login/Signup/and all forms pages
 _____________________________
 E. ADD API CALL AND SEED DATABASE
 1. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
@@ -22,12 +23,8 @@ ______________________________
 README
 1. Fix Readme in md format to reader friendly view
 
-
 FEATURE REQUEST
 1. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
-
-
-
 
 - [X]Sprint 1 - Validations and Errors
 - [X] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
