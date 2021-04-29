@@ -40,7 +40,7 @@ class SessionsController < ApplicationController
       r.email = request.env['omniauth.auth'][:info][:email]
       r.password = SecureRandom.hex(6)
       # binding.pry
-      r.profile_pic = request.env['omniauth.auth'][:info][:image]
+      # r.profile_pic = request.env['omniauth.auth'][:info][:image]
       
     end 
    

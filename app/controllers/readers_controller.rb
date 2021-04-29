@@ -1,5 +1,8 @@
 class ReadersController < ApplicationController
 
+    before_action :set_reader, except: [:new, :create]
+    
+
     def new
         @reader = Reader.new
     end
@@ -11,22 +14,19 @@ class ReadersController < ApplicationController
             session[:reader_id] = @reader.id
             redirect_to reader_path(@reader)
         else
-            # reader.errors.full_messages
             render :new
         end
     end
 
     def show
-        @reader = Reader.find_by_id(params[:id])
         redirect_to '/' if !@reader
     end
 
     def edit
-        @reader = Reader.find(params[:id])
+       
     end
 
     def update
-        @reader = Reader.find_by_id(params[:id])
         if @reader.update(reader_params)
             redirect_to reader_path(@reader)
         else
@@ -35,7 +35,6 @@ class ReadersController < ApplicationController
     end
 
     def destroy
-        @reader = Reader.find_by_id(params[:id])
         @reader.destroy
         session.clear
         redirect_to root_path
@@ -48,4 +47,8 @@ private
     def reader_params
         params.require(:reader).permit(:username, :password, :first_name, :last_name, :favorite_genre, :favorite_book, :profile_pic, :email)
     end
+
+    def set_reader
+        @reader = Reader.find_by_id(params[:id])
+    end  
 end

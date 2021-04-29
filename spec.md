@@ -53,7 +53,10 @@ Specs:
 	error messages are in the views (example: the partial _reader.html handles error messages for new and edit pages for readers)
 
 Confirm:
-- [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
+- [X] The application is pretty DRY
+	abstracted find_by into private methods in each controller, and used partials
+- [X] Limited logic in controllers
+	abstracted find_by into private methods in each controller
 - [ ] Views use helper methods if appropriate
-- [ ] Views use partials if appropriate
+- [X] Views use partials if appropriate
+	Partials for _reader, _book, and _review forms, partial for layout _header

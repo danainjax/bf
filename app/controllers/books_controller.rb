@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
 
+    before_action :set_book, only: [:show, :edit, :update, :destroy]
+
     def new
         @book = Book.new
     end
@@ -16,17 +18,16 @@ class BooksController < ApplicationController
     end
 
     def show
-        @book = Book.find_by_id(params[:id])
+        
         redirect_to books_path if !@book
             
     end
 
     def edit
-        @book = Book.find(params[:id])
+       
     end
 
     def update
-        @book = Book.find_by_id(params[:id])
         @book.update(book_params)
         redirect_to book_path(@book)
     end
@@ -45,7 +46,7 @@ class BooksController < ApplicationController
     
 
     def destroy
-        Book.find(params[:id]).destroy
+        @book.destroy
         redirect_to books_path
     end
 
@@ -56,4 +57,8 @@ private
     def book_params
         params.require(:book).permit(:title, :author, :published, :publisher, :description, :genre, :image, :link_to_purchase)
     end
+
+    def set_book
+        @book = Book.find_by_id(params[:id])
+    end 
 end

@@ -1,5 +1,4 @@
 Build List
-
 _____________________________
 A. HELPER METHODS
 1. Protect data from being accessed/created/destroyed unless a reader is logged in and the data belongs to them. Prevent other readers from updating or accessing a reader's profile. <<Helper methods>>
@@ -62,4 +61,4 @@ Sprint 5 - How Does it Look?/Facelift
 - [X]   Nav bar
 
 Sprint 6 - Instructor Review and Feedback Prior to Project Review
-- [ ]   Schedule meeting with Aysan to go through App and write notes on what needs to be fixed
+- [ ]   Schedule meeting/ attend office hours with Aysan to go through App and write notes on what needs to be fixed
