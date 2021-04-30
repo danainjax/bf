@@ -1,12 +1,16 @@
 Build List
 _____________________________
 A. HELPER METHODS
-1. Protect data from being edited/destroyed/created unless the data belongs to them.  <<Helper methods>>
+1. Protect data from being edited/destroyed/created unless the data belongs to the reader.  <<Helper methods>> Just double check this...
+Don't allow a reader to delete a book unless they created it.
+Make sure a review cannot be edited unless by the reader that created it. 
+------------------------------
+-Remove readers index route, not necessary
 ______________________________
 B. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
 1. facebook login (profile_pic attribute not coming thru, commented out) - able to login with google if email address is not danainjax@ gmail.com (not existing email address) See if can add an or statment to the validation or add a custom validator for FB and Google
 
-2. Check why profile pic is not coming thru in sessions controller facebook method. Could create a new attribut to handle the different data type for the pic when coming in from fb and google. Example :pic_from_omniauth and set the data type as string instead of file, then hypothesis is can render with a link_to/href
+2. Check why profile pic is not coming thru in sessions controller facebook method. Could create a new attribute to handle the different data type for the pic when coming in from fb and google. Example :pic_from_omniauth and set the data type as string instead of file, then hypothesis is can render with a link_to/href
 __________________________
 D. HTML/CSS LAYOUT
 1. How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
@@ -15,9 +19,6 @@ D. HTML/CSS LAYOUT
 _____________________________
 E. ADD API CALL AND SEED DATABASE
 1. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
-______________________________
-F. SCOPE/ROUTE
-1. Build scope method to group reviews index by five_star reviews 
 ______________________________
 README
 1. Fix Readme in md format to reader friendly view
@@ -46,10 +47,11 @@ FEATURE REQUEST
     books/10/reviews/new
 - [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
     added alphabetize to books index, books/alpha   books.alpha
+    five_star, scoped book by those with five star reviews and viewable /five_star
 
 Sprint 4 - Refactoring/DRY
 - [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
+- [X] Limited logic in controllers
 - [X] Views use helper methods if appropriate
 - [X] Views use partials if appropriate
 
