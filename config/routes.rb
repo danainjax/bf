@@ -6,13 +6,14 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get '/auth/facebook/callback', to: 'sessions#facebook'
   get '/auth/:provider/callback', to: 'sessions#omniauth'
+  get 'five_star' => 'books#five_star'
   
 
   resources :books
   resources :reviews
 
   resources :readers do 
-    resources :reviews, only: [:index, :show, :new]
+    resources :reviews, only: [:index, :show]
   end
 
   resources :books do

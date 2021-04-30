@@ -41,6 +41,11 @@ class BooksController < ApplicationController
             end
        
     end
+
+    def five_star
+        @books = Book.all.five_star
+        # binding.pry
+    end
     
      
     

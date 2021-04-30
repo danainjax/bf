@@ -1,12 +1,12 @@
 Build List
 _____________________________
 A. HELPER METHODS
-1. Protect data from being accessed/created/destroyed unless a reader is logged in and the data belongs to them. Prevent other readers from updating or accessing a reader's profile. <<Helper methods>>
+1. Protect data from being edited/destroyed/created unless the data belongs to them.  <<Helper methods>>
 ______________________________
 B. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
 1. facebook login (profile_pic attribute not coming thru, commented out) - able to login with google if email address is not danainjax@ gmail.com (not existing email address) See if can add an or statment to the validation or add a custom validator for FB and Google
 
-2. Check why profile pic is not coming thru in sessions controller facebook method.
+2. Check why profile pic is not coming thru in sessions controller facebook method. Could create a new attribut to handle the different data type for the pic when coming in from fb and google. Example :pic_from_omniauth and set the data type as string instead of file, then hypothesis is can render with a link_to/href
 __________________________
 D. HTML/CSS LAYOUT
 1. How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
@@ -50,8 +50,8 @@ FEATURE REQUEST
 Sprint 4 - Refactoring/DRY
 - [ ] The application is pretty DRY
 - [ ] Limited logic in controllers
-- [ ] Views use helper methods if appropriate
-- [ ] Views use partials if appropriate
+- [X] Views use helper methods if appropriate
+- [X] Views use partials if appropriate
 
 Sprint 5 - How Does it Look?/Facelift
 - [X]   Bootstrap- added basic bootstrap

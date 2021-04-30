@@ -7,6 +7,7 @@ class Book < ApplicationRecord
     validates :author, presence: true
 
     scope :alpha, ->{order('title')}
+    scope :five_star, ->{joins(:reviews).where("reviews.star_rating == 5")}
 
 
     def self.get_hardcover_fiction

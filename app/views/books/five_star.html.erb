@@ -1,0 +1,20 @@
+<h1> These books all received 5 stars! </h1>
+
+<% @books.each do |book| %>
+
+<p>     
+                <div class="card" style="width: 10rem;">
+                <img src= "/images/bf.jpeg" class="card-img-top" alt="test">
+                <div class="card-body">
+                    <p class="card-text">
+                    <h2<%= book.title %><br></h2>
+                    <%= book.description%><br>
+                    <%= book.author %><br>
+                    <%= book.genre%>
+                    </p>
+                </div>
+                </div>
+                    
+        </p> 
+   
+   <% end %>
