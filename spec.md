@@ -36,7 +36,8 @@ Specs:
 
 - [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
 	Alphabetized the books index  books.alpha  books/alpha
-- [ ] Add route to scope method
+	Scoped Books by Five Star reviews and made a view under Books called five_star   /five_star
+- [X] Add route to scope method
 
 - [X] Include signup (how e.g. Devise) /signup
 - [X] Include login (how e.g. Devise)/login
