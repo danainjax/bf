@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
 
     before_action :set_review, only: [:edit, :update, :destroy, :show ]
+    
 
     def new
         # byebug

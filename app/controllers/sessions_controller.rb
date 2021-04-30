@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  # skip_before_action :verify_authenticity_token, only: :create
+  skip_before_action :authorized
   def new #renders the login form, does not create a new object
     # if logged_in?
     #   redirect_to 'root'

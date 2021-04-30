@@ -1,6 +1,7 @@
 class ReadersController < ApplicationController
-
+    skip_before_action :authorized, only: [:new, :create]
     before_action :set_reader, except: [:new, :create]
+    
     
 
     def new
@@ -19,10 +20,20 @@ class ReadersController < ApplicationController
     end
 
     def show
-        redirect_to '/' if !@reader
+        if !@reader
+            redirect_to '/' 
+        elsif
+            @reader.id == session[:reader_id] 
+        else
+            redirect_to '/'
+        end
     end
 
     def edit
+        #check this code, currently able to edit via URL hacking
+        if !@reader || !@reader.id == session[:reader_id]
+            redirect_to '/'
+        end
        
     end
 
