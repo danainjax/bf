@@ -19,7 +19,7 @@ _____________________________
 A. HELPER METHODS
 1. Protect data from being edited/destroyed/created unless the data belongs to the reader.  <<Helper methods>> Just double check this...
 Don't allow a reader to delete a book unless they created it.
-Make sure a review cannot be edited unless by the reader that created it. 
+Make sure a review cannot be edited unless by the reader that created it. Currently able to edit if /reviews/6 reviews/7, need to add a conditional.
 ------------------------------
 -Remove readers index route, not necessary
 ______________________________
