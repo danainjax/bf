@@ -8,9 +8,9 @@ E. Fix navbar to drop downs with Add Review, Add Book, My Reviews, Currently Rea
 F. Think of an additional model possibly to add as an enhancement to this app.
 ______________________________
 G. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
-1. facebook login (profile_pic attribute not coming thru, commented out) - 
- Could create a new attribute to handle the different data type for the pic when coming in from fb and google. Example :pic_from_omniauth and set the data type as string instead of file, then hypothesis is can render with a link_to/href
- 2. Edge case: Cannot login with the different providers when have same email address, prevented by validations.
+1. Check on data coming in from google omniauth, image not coming thru
+2. Add logos=> buttons for social logins (google/fb)
+3. Edge case: Cannot login with the different providers when have same email address, prevented by validations. May need an additional model to handle identities of a reader OR understand how to update the provider in omniauth method to find the existing reader by email.
 __________________________
 H. HTML/CSS LAYOUT
 1. How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
