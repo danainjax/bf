@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
   def omniauth
     
-    reader = Reader.find_or_create_by(email: auth["info"]["email"], provider: auth[:provider]) do |r|
+    reader = Reader.find_or_create_by(email: auth["info"]["email"]) do |r|
       # byebug
      
       r.username = auth[:info][:name]
