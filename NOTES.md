@@ -1,29 +1,36 @@
 Build List
+***********
+Requirement:
 
 A. Views use helper methods as appropriate
-B. Reviews form, fix the user experience, May need to separate the status and review? Or Just be able to submit a status
-C. Fix form pages and how they look
-D. Add more books data 
-E. Fix navbar to drop downs with Add Review, Add Book, My Reviews, Currently Reading, Want to Read, scopes, etc.
-F. Think of an additional model possibly to add as an enhancement to this app.
-______________________________
-G. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
+_____________________________
+B. ADD API CALL AND SEED DATABASE (more relevant data - Add more books data )
 
-2. Add logos=> buttons for social logins (google/fb)
-__________________________
-H. HTML/CSS LAYOUT
+1. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
+______________________________
+C. USER EXPERIENCE
+
+1. Fix navbar to drop downs with Add Review, Add Book, My Reviews, Currently Reading, Want to Read, scopes, etc.
+2. Reviews form, fix the user experience,- Add a link to create a review or Find a Book. Fix form pages and how they look.
+______________________________
+D. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
+
+1. Add logos=> buttons for social logins (google/fb)
+____________________________
+E. HTML/CSS LAYOUT
+
 1. How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
 2. style reader profile info on readers show page
 3. Style Login/Signup/and all forms pages
-_____________________________
-I. ADD API CALL AND SEED DATABASE
-1. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
 ______________________________
-README
-1. Fix Readme in md format to reader friendly view
+F. README
 
-FEATURE REQUEST
+1. Fix Readme in md format to reader friendly view
+_______________________________
+G. FEATURE REQUEST
 1. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
+2. Think of an additional model possibly to add as an enhancement to this app.
+______________________________
 
 - [X]Sprint 1 - Validations and Errors
 - [X] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
