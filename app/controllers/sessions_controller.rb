@@ -1,54 +1,28 @@
 class SessionsController < ApplicationController
   skip_before_action :authorized
-  def new #renders the login form, does not create a new object
-    # if logged_in?
-    #   redirect_to 'root'
+  def new 
   end
 
   def home #root route
-    
   end
-
-  def facebook
-    # byebug
-    reader = Reader.find_or_create_by(email: auth["info"]["email"]) do |r|
-        r.username = auth['info']['name']
-        r.email = auth['info']['email']
-        # r.profile_pic = auth['info']['image']
-        r.password = SecureRandom.hex(6)
-      end
-      # binding.pry
-      if reader.valid?
-        session[:reader_id] = reader.id
-        flash[:message] = "You have successfully logged in with facebook"
-      redirect_to reader_path(reader)
-      else
-        redirect_to '/login'
-      end
-
-  end
-
-  
-
-  
 
   def omniauth
     
-    reader = Reader.find_or_create_by(uid: request.env['omniauth.auth'][:uid], provider: request.env['omniauth.auth'][:provider]) do |r|
-      
-      r.username = request.env['omniauth.auth'][:info][:first_name]
-      r.email = request.env['omniauth.auth'][:info][:email]
+    reader = Reader.find_or_create_by(email: auth["info"]["email"], provider: auth[:provider]) do |r|
+      # byebug
+     
+      r.username = auth[:info][:name]
+      r.email = auth[:info][:email]
       r.password = SecureRandom.hex(6)
-      # binding.pry
       # r.profile_pic = request.env['omniauth.auth'][:info][:image]
-      
     end 
-   
-    if reader.save
+  
+    if reader.valid?
       session[:reader_id] = reader.id
-      flash[:message] = "You have successfully logged in with Google"
+      flash[:message] = "You have successfully logged in."
       redirect_to reader
     else
+      flash[:message] = "Unsuccessful login. Please try your password again or log in with another provider."
       redirect_to login_path
     end
   end

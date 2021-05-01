@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get    'login' => 'sessions#new'
   post   'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
-  get '/auth/facebook/callback', to: 'sessions#facebook'
   get '/auth/:provider/callback', to: 'sessions#omniauth'
   get 'five_star' => 'books#five_star'
   
