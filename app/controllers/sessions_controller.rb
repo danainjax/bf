@@ -7,14 +7,18 @@ class SessionsController < ApplicationController
   end
 
   def omniauth
-    
+   
     reader = Reader.find_or_create_by(email: auth["info"]["email"]) do |r|
-      # byebug
+
      
       r.username = auth[:info][:name]
       r.email = auth[:info][:email]
       r.password = SecureRandom.hex(6)
-      r.omni_pic = auth[:info][:image]
+      if auth[:info][:image]
+        r.omni_pic = auth[:info][:image]
+      else 
+        r.omni_pic = auth[:info][:picture]
+        end
     end 
   
     if reader.valid?

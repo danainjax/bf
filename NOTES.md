@@ -9,7 +9,6 @@ F. Think of an additional model possibly to add as an enhancement to this app.
 ______________________________
 G. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
 
-1. Check on data coming in from google omniauth, image not coming thru
 2. Add logos=> buttons for social logins (google/fb)
 __________________________
 H. HTML/CSS LAYOUT
