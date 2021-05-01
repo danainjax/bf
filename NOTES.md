@@ -1,18 +1,23 @@
 Build List
 
--Remove readers index route, not necessary
+A. Views use helper methods as appropriate
+B. Reviews form, fix the user experience, May need to separate the status and review? Or Just be able to submit a status
+C. Fix form pages and how they look
+D. Add more books data 
+E. Fix navbar to drop downs with Add Review, Add Book, My Reviews, Currently Reading, Want to Read, scopes, etc.
+F. Think of an additional model possibly to add as an enhancement to this app.
 ______________________________
-B. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
+G. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
 1. facebook login (profile_pic attribute not coming thru, commented out) - able to login with google if email address is not danainjax@ gmail.com (not existing email address) See if can add an or statment to the validation or add a custom validator for FB and Google
 
 2. Check why profile pic is not coming thru in sessions controller facebook method. Could create a new attribute to handle the different data type for the pic when coming in from fb and google. Example :pic_from_omniauth and set the data type as string instead of file, then hypothesis is can render with a link_to/href
 __________________________
-D. HTML/CSS LAYOUT
+H. HTML/CSS LAYOUT
 1. How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
 2. style reader profile info on readers show page
 3. Style Login/Signup/and all forms pages
 _____________________________
-E. ADD API CALL AND SEED DATABASE
+I. ADD API CALL AND SEED DATABASE
 1. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
 ______________________________
 README
@@ -47,7 +52,7 @@ FEATURE REQUEST
 Sprint 4 - Refactoring/DRY
 - [ ] The application is pretty DRY
 - [X] Limited logic in controllers
-- [X] Views use helper methods if appropriate
+- [ ] Views use helper methods if appropriate
 - [X] Views use partials if appropriate
 
 Sprint 5 - How Does it Look?/Facelift
