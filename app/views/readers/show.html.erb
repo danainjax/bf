@@ -11,6 +11,8 @@ Favorite Genre: <%= @reader.favorite_genre%><br>
 Favorite Book: <%= @reader.favorite_book %><br><br>
 <% if @reader.profile_pic.attached? %>
     <img src= "<%= (url_for(@reader.profile_pic)) %>" alt="profile pic" height="250", width="150"><br>
+    <% elsif @reader.omni_pic? %>
+        <img src= "<%= (url_for(@reader.omni_pic)) %>" alt="social pic" ><br>
 <% end %>
 <%= link_to "My Reviews", reader_reviews_path(current_reader) %><br>
 

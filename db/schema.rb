@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 2021_04_20_230256) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "uid"
     t.string "provider"
+    t.string "omni_pic"
   end
 
   create_table "reviews", force: :cascade do |t|

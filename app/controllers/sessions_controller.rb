@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       r.username = auth[:info][:name]
       r.email = auth[:info][:email]
       r.password = SecureRandom.hex(6)
-      # r.profile_pic = request.env['omniauth.auth'][:info][:image]
+      r.omni_pic = auth[:info][:image]
     end 
   
     if reader.valid?
