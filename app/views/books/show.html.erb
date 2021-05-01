@@ -2,7 +2,7 @@
 
 <hr>
 <%= link_to "Buy From Amazon",  @book.link_to_purchase, :target => "_blank" %><br>
-<%= link_to "edit", edit_book_path(@book) %><br>
+
 <%= link_to "review", new_book_review_path(@book) %><br>
 Author: <%= @book.author %><br>
 Published: <%= @book.published %><br>
@@ -10,11 +10,14 @@ Publisher: <%= @book.publisher %><br>
 Description: <%= @book.description %><br>
 Genre: <%= @book.genre %><br><br>
 <img src= "<%= @book.image %>" height ="329" width "500" ><br>
-<%= button_to "Delete Book", book_path(@book), method: :delete %>
+
+  <!--   <%= link_to "edit", edit_book_path(@book) %><br>
+    # <%= link_to "delete book", book_path(@book), method: :delete %> -->
+    
 
 <% if @book.reviews.any? %>
     <hr>
-    <h2> Reviews</h2>
+    <h3><%= link_to "Reviews", book_reviews_path(@book) %> </h3>
     
         <% @book.reviews.each do |review| %>
 

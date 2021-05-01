@@ -1,26 +1,5 @@
 Build List
 
-Question:
-
-Ask the difference between:
-#returns the current reader or sets it equal to the user found by reader_id in the session
-    #  def current_reader
-    #     @current_reader ||= Reader.find_by(id: session[:reader_id])
-    #  end
-
-and 
-
-def current_reader
-        Reader.find_by(id: session[:reader_id])
-    end
-
- ( and look at all the places calling current_reader in the app )
-_____________________________
-A. HELPER METHODS
-1. Protect data from being edited/destroyed/created unless the data belongs to the reader.  <<Helper methods>> Just double check this...
-Don't allow a reader to delete a book unless they created it.
-Make sure a review cannot be edited unless by the reader that created it. Currently able to edit if /reviews/6 reviews/7, need to add a conditional.
-------------------------------
 -Remove readers index route, not necessary
 ______________________________
 B. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE

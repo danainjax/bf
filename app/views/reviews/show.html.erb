@@ -11,8 +11,10 @@
                         <em><%= @review.book_review %></em>
                         <%= @review.reader.username %><br><br>
                         <%= @review.status %><br>
-                        <%= link_to "edit", edit_review_path %><br>
-                        <%= button_to "Delete Review", review_path(@review), method: :delete %>
+                        <% if current_reader.id == @review.reader_id %>
+                                <%= link_to "edit", edit_review_path %><br>
+                                <%= button_to "Delete Review", review_path(@review), method: :delete %>
+                        <% end %>
                        </p>
                 </div>
                 </div>

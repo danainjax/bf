@@ -18,13 +18,16 @@ class BooksController < ApplicationController
     end
 
     def show
-        
+           
         redirect_to books_path if !@book
+        
             
     end
 
     def edit
-       
+        if current_reader.id != @book.reader_ids
+            redirect_to book_path(@book)
+        end
     end
 
     def update

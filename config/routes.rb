@@ -9,15 +9,16 @@ Rails.application.routes.draw do
   get 'five_star' => 'books#five_star'
   
 
-  resources :books
+  # resources :books
   resources :reviews
 
-  resources :readers do 
+  resources :readers, except: [:index] do 
     resources :reviews, only: [:index, :show]
   end
 
   resources :books do
-    resources :reviews, only: [:index, :show, :new]
+    resources :reviews, shallow: true
+    #shallow gives me [:index, :new, :create]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -29,11 +29,11 @@ class ReviewsController < ApplicationController
     def index
        @book = Book.find_by(id: params[:book_id])
         if params[:book_id] && !@book.nil?
-            @reviews = Book.find(params[:book_id]).reviews
+            @reviews = @book.reviews
         else
             @reader = Reader.find_by(id: params[:reader_id])
             if params[:reader_id] && !@reader.nil?
-                @reviews = Reader.find(params[:reader_id]).reviews
+                @reviews = @reader.reviews
             else
                 @reviews = Review.all
             end
@@ -41,6 +41,9 @@ class ReviewsController < ApplicationController
     end
     
     def edit 
+        if current_reader.id != @review.reader_id
+            redirect_to review_path(@review)
+        end
     end
     
     def update
