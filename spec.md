@@ -60,4 +60,4 @@ Confirm:
 	abstracted find_by into private methods in each controller
 - [ ] Views use helper methods if appropriate
 - [X] Views use partials if appropriate
-	Partials for _reader, _book, and _review forms, partial for layout _header
+	Partials for _reader, _book, and _review forms, partial for layout _header, made _errors partial to render errors in the appropriate views.

@@ -1,10 +1,6 @@
 Build List
-***********
-Requirement:
-
-A. Views use helper methods as appropriate
 _____________________________
-B. ADD API CALL AND SEED DATABASE (more relevant data - Add more books data )
+B. MORE DATA/REVIEWS- ADD API CALL AND SEED DATABASE (more relevant data - Add more books data )
 
 1. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
 ______________________________
