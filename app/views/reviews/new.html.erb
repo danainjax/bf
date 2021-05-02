@@ -1,6 +1,8 @@
 <h1>Book Review</h1>
+ by <%= current_reader.username %><br>
+    <%= render 'layouts/profile_pic' %>
     <% if params[:book_id] %> 
-        for <h3><%= @review.book.title %></h3> <img src="<%= @review.book.image %>" height=10% width = 10%>
+        <h3><%= @review.book.title %></h3> <img src="<%= @review.book.image %>" height=10% width = 10%>
     <% else %> 
         <img src="/images/bf.jpeg" height=20% width=20%>
     <% end %>

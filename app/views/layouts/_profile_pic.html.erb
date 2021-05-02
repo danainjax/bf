@@ -1,0 +1,5 @@
+<% if current_reader.profile_pic.attached? %>
+    <img src= "<%= (url_for(current_reader.profile_pic)) %>" alt="profile pic" height="250", width="150"><br>
+    <% elsif current_reader.omni_pic? %>
+        <img src= "<%= (url_for(current_reader.omni_pic)) %>" alt="social pic" height=75px width =75px ><br>
+<% end %>

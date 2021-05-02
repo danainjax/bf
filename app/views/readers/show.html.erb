@@ -9,11 +9,7 @@ Name: <%= @reader.first_name %> <%= @reader.last_name %><br>
 Email: <%= @reader.email %><br>
 Favorite Genre: <%= @reader.favorite_genre%><br>
 Favorite Book: <%= @reader.favorite_book %><br><br>
-<% if @reader.profile_pic.attached? %>
-    <img src= "<%= (url_for(@reader.profile_pic)) %>" alt="profile pic" height="250", width="150"><br>
-    <% elsif @reader.omni_pic? %>
-        <img src= "<%= (url_for(@reader.omni_pic)) %>" alt="social pic" height=75px width =75px ><br>
-<% end %>
+<%= render 'layouts/profile_pic' %>
 <%= link_to "My Reviews", reader_reviews_path(current_reader) %><br>
 
 <% @reviews = current_reader.reviews %>
