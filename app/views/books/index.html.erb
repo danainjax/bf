@@ -1,5 +1,5 @@
 <center>
-<h3> Search titles </h3>
+<h3> Search </h3>
 
 
     <%= form_tag(books_path, method: :get) do %>
@@ -8,6 +8,24 @@
     <%= submit_tag 'Search', name: nil %>
 
 <% end %>
+
+
+<h3></h3>
+    <%= form_tag(books_path, method: :get) do %>
+    Author <%= text_field_tag :author, params[:author] %>
+  
+    <%= submit_tag 'Search', name: nil %>
+
+<% end %>
+<h3></h3>
+    <%= form_tag(books_path, method: :get) do %>
+    Genre <%= text_field_tag :genre, params[:genre] %>
+  
+    <%= submit_tag 'Search', name: nil %>
+
+<% end %>
+
+
 
 
 <% @books.each do |book| %>

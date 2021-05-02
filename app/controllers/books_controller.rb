@@ -39,6 +39,10 @@ class BooksController < ApplicationController
         
             if params[:title]
                 @books = Book.where('title LIKE ?', "%#{params[:title].upcase}%")
+                elsif params[:author]
+                    @books = Book.where('author LIKE ?', "%#{params[:author]}%")
+                elsif params[:genre]
+                    @books = Book.where('genre LIKE ?', "#{params[:genre]}")
             else
                 @books = Book.all.alpha
             end
