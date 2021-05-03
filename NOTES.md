@@ -6,8 +6,6 @@ BUILD LIST TARGETS
 - [X] Views use partials if appropriate
 _____________________________
 M_V_P
-
-A. Refactor Books class for API calls to dry up the code
  
 B. HTML/CSS LAYOUT
     1. Fix form pages
