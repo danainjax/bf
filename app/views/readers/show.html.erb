@@ -1,16 +1,16 @@
-<h1><%= @reader.username %></h1>
-
-
-<hr>
-<%= link_to "edit", edit_reader_path(@reader) %><br>
-<%= button_to "Delete Reader Profile/Account", reader_path(@reader), method: :delete %>
+<h2><%= @reader.username %></h2>
+<%= render 'layouts/profile_pic' %>
 Username: <%= @reader.username%><br>
 Name: <%= @reader.first_name %> <%= @reader.last_name %><br>
 Email: <%= @reader.email %><br>
 Favorite Genre: <%= @reader.favorite_genre%><br>
 Favorite Book: <%= @reader.favorite_book %><br><br>
-<%= render 'layouts/profile_pic' %>
-<%= link_to "My Reviews", reader_reviews_path(current_reader) %><br>
+<%= link_to "edit", edit_reader_path(@reader) %><br>
+
+<hr>
+
+
+<h3><%= link_to "My Reviews", reader_reviews_path(current_reader) %></h3>
 
 <% @reviews = current_reader.reviews %>
 <% @reviews.each do |review| %>
@@ -19,7 +19,8 @@ Favorite Book: <%= @reader.favorite_book %><br><br>
         <img src= "<%= review.book.image%>" class="card-img-top" alt="test">
         <div class="card-body">
             <p class="card-text"><%= link_to review.book.title, review_path(review) %><br>
-            <em><%= review.status %></em>
+            <em><%= review.status %></em><br>
+            <%= link_to "edit", edit_review_path(review) %>
             </p>
         </div>
         </div>
