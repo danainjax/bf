@@ -1,31 +1,29 @@
-Build List
+BUILD LIST TARGETS
+*Refactoring/DRY*
+- [ ] The application is pretty DRY
+- [X] Limited logic in controllers
+- [ ] Views use helper methods if appropriate
+- [X] Views use partials if appropriate
 _____________________________
-B. MORE DATA/REVIEWS- ADD API CALL AND SEED DATABASE (more relevant data - Add more books data )
+A. Refactor Books class for API calls to dry up the code
 
-1. Search out how to add the NY Times Book review to the reviews show page for the book searched or displayed
-______________________________
-C. USER EXPERIENCE
+B. DATA//Add a link to the NY Times Book review or review on some website for the current book
 
-1. Fix navbar to drop downs with Add Review, Add Book, My Reviews, Currently Reading, Want to Read, scopes, etc.
-2. Reviews form, fix the user experience,- Add a link to create a review or Find a Book. Fix form pages and how they look.
-______________________________
+C. HTML/CSS LAYOUT
+    1. Fix form pages
+    2 How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
+    3 style reader profile info on readers show page
+    4. Style Login/Signup/and all forms pages
+    
 D. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
+    1. Add logos=> buttons for social logins (google/fb)
 
-1. Add logos=> buttons for social logins (google/fb)
-____________________________
-E. HTML/CSS LAYOUT
+E. README
+    1. Complete and Fix Readme instructions in md format to reader friendly view
 
-1. How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
-2. style reader profile info on readers show page
-3. Style Login/Signup/and all forms pages
-______________________________
-F. README
-
-1. Fix Readme in md format to reader friendly view
-_______________________________
-G. FEATURE REQUEST
-1. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
-2. Think of an additional model possibly to add as an enhancement to this app.
+F. FEATURE REQUEST
+    1. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
+    2. Think of an additional model possibly to add as an enhancement to this app.
 ______________________________
 
 - [X]Sprint 1 - Validations and Errors
