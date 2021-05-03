@@ -29,5 +29,7 @@
 # Book.get_list("sports")
 # Book.get_list("science")
 # Book.get_list("religion-spirituality-and-faith")
-Book.get_list("family")
+# Book.get_list("family")
+Book.get_list("hardcover-political-books")
+Book.get_list("race-and-civil-rights")
 
