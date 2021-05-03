@@ -8,3 +8,7 @@
 Book.get_hardcover_fiction
 Book.get_hardcover_nonfiction
 Book.get_young_adult
+Book.get_hardcover_advice
+Book.get_animals
+Book.celebrities
+Book.business_books
