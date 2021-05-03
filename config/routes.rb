@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:index, :show]
   end
 
-  resources :books do
+  resources :books, only: [:index, :show] do
     resources :reviews, shallow: true
     #shallow gives me [:index, :new, :create]
   end
