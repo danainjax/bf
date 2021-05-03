@@ -35,7 +35,8 @@ Specs:
 	Book - title uniqueness, author presence
 
 - [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
-	Alphabetized the books index  books.alpha  books/alpha
+	Scoped book index by genre Book.genre  
+	Scoped reviews index by book_id Review.by_the_book
 	Scoped Books by Five Star reviews and made a view under Books called five_star   /five_star
 - [X] Add route to scope method
 

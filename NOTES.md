@@ -48,8 +48,9 @@ ______________________________
 - [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
     books/10/reviews/new
 - [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
-    added alphabetize to books index, books/alpha   books.alpha
-    five_star, scoped book by those with five star reviews and viewable /five_star
+    Scoped book index by genre Book.genre  
+	Scoped reviews index by book_id Review.by_the_book
+	Scoped Books by Five Star reviews and made a view under Books called five_star   /five_star
 
 Sprint 4 - Refactoring/DRY
 - [ ] The application is pretty DRY

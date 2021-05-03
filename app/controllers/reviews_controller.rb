@@ -35,7 +35,7 @@ class ReviewsController < ApplicationController
             if params[:reader_id] && !@reader.nil?
                 @reviews = @reader.reviews
             else
-                @reviews = Review.all
+                @reviews = Review.by_the_book
             end
         end
     end
