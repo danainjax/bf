@@ -5,23 +5,27 @@ BUILD LIST TARGETS
 - [ ] Views use helper methods if appropriate
 - [X] Views use partials if appropriate
 _____________________________
+M_V_P
+
 A. Refactor Books class for API calls to dry up the code
-
-B. DATA//Add a link to the NY Times Book review or review on some website for the current book
-
-C. HTML/CSS LAYOUT
+ 
+B. HTML/CSS LAYOUT
     1. Fix form pages
     2 How to display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
     3 style reader profile info on readers show page
     4. Style Login/Signup/and all forms pages
-    
+
+C. README
+    1. Complete and Fix Readme instructions in md format to reader friendly view
+____________________________________    
+STRETCH
+
 D. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
     1. Add logos=> buttons for social logins (google/fb)
 
-E. README
-    1. Complete and Fix Readme instructions in md format to reader friendly view
 
-F. FEATURE REQUEST
+E. FEATURE REQUEST
+    i. DATA//Add a link to the NY Times Book review or review on some website for the current book
     1. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
     2. Think of an additional model possibly to add as an enhancement to this app.
 ______________________________
