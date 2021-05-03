@@ -1,4 +1,4 @@
-<h1> These books all received 5 stars! </h1>
+<h3> These books all received 5 stars! </h3>
 
 <% @books.each do |book| %>
 
@@ -7,7 +7,7 @@
                 <img src= "<%= book.image%>" class="card-img-top" alt="test">
                 <div class="card-body">
                     <p class="card-text">
-                    <h2<%= book.title %><br></h2>
+                    <%= link_to book.title, book_path(book) %><br>
                     <%= book.description%><br>
                     <%= book.author %><br>
                     <%= book.genre%>

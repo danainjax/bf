@@ -19,7 +19,7 @@
 <% end %>
 <h3></h3>
     <%= form_tag(books_path, method: :get) do %>
-    Genre <%= text_field_tag :genre, params[:genre] %>
+    List <%= text_field_tag :genre, params[:genre] %>
   
     <%= submit_tag 'Search', name: nil %>
 
@@ -34,7 +34,8 @@
         <div class="card" style="width: 10rem;">
         <img src= "<%= book.image%>" class="card-img-top" alt="test">
         <div class="card-body">
-            <p class="card-text"><%= link_to book.title.upcase, book_path(book[:id]) %></p>
+            <p class="card-text"><%= link_to book.title.upcase, book_path(book[:id]) %><br>
+            <%= book.genre %></p>
         </div>
         </div>
             
