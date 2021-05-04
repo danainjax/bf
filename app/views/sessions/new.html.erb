@@ -1,7 +1,8 @@
+<center>
 <h1>Log in</h1>
 
 
-<%= bootstrap_form_for(:session, url: login_path)  do |f| %>
+<%= bootstrap_form_for(:session, url: login_path, html: { class: "w-25"})  do |f| %>
    
     <%= f.text_field :username%><br>
    
@@ -18,3 +19,4 @@
 
 
 <p> New reader? <%= link_to "Sign up", signup_path %>
+</center>
