@@ -5,9 +5,7 @@ Before submitting, clean up layout:
  
 A. HTML/CSS LAYOUT
     1. Display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
-    2. Fix form pages
-    3. Style Login/Signup/and all forms pages
-    4. style reader profile info on readers show page
+    2. Style reader profile info on readers show page
 Finish:    
 B. README
     1. Complete and Fix Readme instructions in md format to reader friendly view
