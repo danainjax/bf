@@ -30,7 +30,6 @@ class ReadersController < ApplicationController
     end
 
     def edit
-        #check this code, currently able to edit via URL hacking
         if !@reader || !@reader.id == session[:reader_id]
             redirect_to '/'
         end
