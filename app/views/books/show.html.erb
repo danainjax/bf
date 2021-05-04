@@ -11,14 +11,13 @@ Description: <%= @book.description %><br>
 Best Seller List: <%= @book.genre %><br><br>
 <img src= "<%= @book.image %>" height ="329" width "500" ><br>
   
-
+<center>
 <% if @book.reviews.any? %>
     <hr>
     <h3><%= link_to "Reviews", book_reviews_path(@book) %> </h3>
-    
+<div class="row"> 
         <% @book.reviews.each do |review| %>
-
-        <p>     
+    <div class="col-md-2">    
                 <div class="card" style="width: 10rem;">
                 <img src= "/images/bf.jpeg" class="card-img-top" alt="test">
                 <div class="card-body">
@@ -29,9 +28,10 @@ Best Seller List: <%= @book.genre %><br><br>
                     </p>
                 </div>
                 </div>
-                    
-        </p> 
+    </div>
         <% end %>
 <% end %>
+</div>
+</center>
 <hr>
 
