@@ -1,5 +1,7 @@
+<center>
 <h1>Edit Review</h1>
 <hr>
 <%= render "layouts/errors", :object => @review %>
 <%= render 'review' %><br>
 <%= button_to "Delete Review", review_path(@review), method: :delete %>
+</center>
