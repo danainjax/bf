@@ -1,31 +1,18 @@
 
 
-<%= form_with model: @review  do |f| %>
- 
-  <!-- <%= f.collection_select :book_id, Book.all, :id, :title %><br> -->
+<%= bootstrap_form_with model: @review  do |f| %>
   
   <%= f.hidden_field :reader_id, :value => current_reader.id %> <br><br>
-  <!--<%= f.collection_select :reader_id, Reader.all, :id, :username %><br>-->
 
-  <%= f.label :status %><br>
   <%= f.select :status, ["Want to Read", "Currently Reading", "Read"] %><br><br>
     <% if params[:book_id] %> 
       <%= f.hidden_field :book_id %> 
     <% else %>
       <%= f.collection_select :book_id, Book.all, :id, :title %><br>
       <% end %>
-  <%= f.label 'Book review:' %><br>
   <%= f.text_area :book_review %><br>
 
-  <%= f.label 'Star Rating' %><br>
   <%= f.select :star_rating, [5,4,3,2,1] %><br>
-
-  <hr />
-
-  <!--<%= f.label 'Current_reader:' %><br>
-  <%= current_reader.username %>-->
-  
-  
 
   <%= f.submit  %>
 <% end %>

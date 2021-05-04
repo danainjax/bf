@@ -1,21 +1,21 @@
 
-<%= form_with model: @reader  do |f| %>
-    <%= f.label :username %><br>
-    <%= f.text_field :username%><br>
-    <%= f.label :password%><br>
-    <%= f.password_field :password %><br>
-    <%= f.label :email %><br>
-    <%= f.email_field :email %><br>
-    <%= f.label :first_name%><br>
-    <%= f.text_field :first_name %><br>
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name%><br>
-    <%= f.label :favorite_genre %><br>
-    <%= f.text_field :favorite_genre%><br>
-    <%= f.label :favorite_book%><br>
-    <%= f.text_field :favorite_book%><br>
-    <%= f.label :profile_pic%><br>
-    <%= f.file_field :profile_pic%> <br><br>
+<%= bootstrap_form_with model: @reader  do |f| %>
+
+   <%= f.text_field :username%>
+   
+    <%= f.password_field :password %>
+   
+    <%= f.email_field :email %>
+   
+    <%= f.text_field :first_name %>
+    
+    <%= f.text_field :last_name%>
+   
+    <%= f.text_field :favorite_genre%>
+   
+    <%= f.text_field :favorite_book%>
+    <%= f.label :profile_pic %><br>
+    <%= f.file_field_without_bootstrap :profile_pic %> <br><br>
 
     <%= f.submit %>
 <% end %>

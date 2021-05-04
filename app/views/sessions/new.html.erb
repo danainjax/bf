@@ -1,18 +1,18 @@
 <h1>Log in</h1>
 
 
-<%= form_for(:session, url: login_path)  do |f| %>
-    <%= f.label :username %><br>
+<%= bootstrap_form_for(:session, url: login_path)  do |f| %>
+   
     <%= f.text_field :username%><br>
-    <%= f.label :password%><br>
+   
     <%= f.password_field :password %><br><br>
     
 
-    <%= f.submit "Log in"%>
+    <%= f.submit "Log in"%><br>
     
 <% end %>
-<h3> Or </h3>
-    <p><%= button_to "Log in with Google", '/auth/google_oauth2'  %></p>
+
+    <p><%= button_to "Log in with Google", '/auth/google_oauth2' %></p>
     <p><%= button_to "Log in with Facebook", '/auth/facebook'  %></p>
 
 
