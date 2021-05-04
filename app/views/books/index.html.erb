@@ -4,41 +4,36 @@
 
     <%= form_tag(books_path, method: :get) do %>
     Title <%= text_field_tag :title, params[:title] %>
-  
     <%= submit_tag 'Search', name: nil %>
+    <% end %>
 
-<% end %>
-
-
-<h3></h3>
     <%= form_tag(books_path, method: :get) do %>
     Author <%= text_field_tag :author, params[:author] %>
-  
     <%= submit_tag 'Search', name: nil %>
+    <% end %>
 
-<% end %>
-<h3></h3>
     <%= form_tag(books_path, method: :get) do %>
     List <%= text_field_tag :genre, params[:genre] %>
-  
     <%= submit_tag 'Search', name: nil %>
-
-<% end %>
-
+    <% end %>
 
 
+<div class="row">
 
-<% @books.each do |book| %>
+    <% @books.each do |book| %>
 
-   <p>     
-        <div class="card" style="width: 10rem;">
-        <img src= "<%= book.image%>" class="card-img-top" alt="test">
-        <div class="card-body">
-            <p class="card-text"><%= link_to book.title.upcase, book_path(book[:id]) %><br>
-            <%= book.genre %></p>
-        </div>
+       <div class="col-md-2"> 
+            <div class="card" style="width: 10rem;">
+            <img src= "<%= book.image%>" class="card-img-top" alt="test">
+            <div class="card-body">
+                <p class="card-text"><%= link_to book.title.upcase, book_path(book[:id]) %><br>
+                <%= book.genre %></p>
+            </div>
+            </div>
         </div>
             
-   </p> 
-<% end %>
+    
+        <% end %>
+    
+</div>
 </center>
