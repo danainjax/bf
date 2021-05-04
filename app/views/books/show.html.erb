@@ -5,7 +5,7 @@
 
 <%= link_to "review", new_book_review_path(@book) %><br>
 Author: <%= @book.author %><br>
-Published: <%= @book.published %><br>
+Published: <%= @book.published.to_time.strftime('%b %d, %Y') %><br>
 Publisher: <%= @book.publisher %><br>
 Description: <%= @book.description %><br>
 Best Seller List: <%= @book.genre %><br><br>
