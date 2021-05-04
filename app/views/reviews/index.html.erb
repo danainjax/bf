@@ -1,23 +1,26 @@
-<% @reviews.each do |review| %>
+<div class="row">
 
-   <p>     
+    <% @reviews.each do |review| %>
+
+   <div class="col-md-2">     
         <div class="card" style="width: 10rem;">
-        <img src= "<%= review.book.image%>" class="card-img-top" alt="test">
-        <div class="card-body">
-            <p class="card-text"><%= link_to review.book.title, book_path(review.book.id) %><br>
-            <h3><%= review.star_rating %></h3>
-            <%= review.book_review %><br>
-            -<%= review.reader.username %>
-            <% if current_reader.id == review.reader_id %>
-                    <%= link_to "edit", edit_review_path(review) %><br>
+                <img src= "<%= review.book.image%>" class="card-img-top" alt="test">
+                <div class="card-body">
+                    <p class="card-text"><%= link_to review.book.title, book_path(review.book.id) %><br>
+                    <h3><%= review.star_rating %></h3>
+                    <%= review.book_review %><br>
+                    -<%= review.reader.username %>
+                    <% if current_reader.id == review.reader_id %>
+                            <%= link_to "edit", edit_review_path(review) %><br>
+                            
+                    <% end %>
                     
-            <% end %>
-            </p>
-        </div>
-        </div>
+                </div>
+                </div>
+    </div>
             
-   </p> 
-<% end %>
-
+   
+    <% end %>
+</div>
 
 
