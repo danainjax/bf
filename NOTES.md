@@ -4,7 +4,7 @@ _____________________________
 Before submitting, clean up layout:
  
 A. HTML/CSS LAYOUT
-    1. Display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
+    1. Grid layout? Rows/Columns? // Display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
     2. Style reader profile info on readers show page
 Finish:    
 B. README
@@ -12,11 +12,13 @@ B. README
 ____________________________________    
 STRETCH
 
-C. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
+C. Create a search form with multiple dropdown bars for the books/index
+
+D. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
     1. Add logos=> buttons for social logins (google/fb)
 
 
-D. FEATURE REQUEST
+E. FEATURE REQUEST
     i. DATA//Add a link to the NY Times Book review or review on some website for the current book
     1. Stretch Goals // Feature Requests - create a new branch for friending another reader, and one to implement a timeline feature, like feature
     2. Think of an additional model possibly to add as an enhancement to this app.
