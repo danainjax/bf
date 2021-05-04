@@ -2,6 +2,8 @@ BUILD LIST TARGETS
 [X] Project requirements met for MVP
 _____________________________
 Before submitting, clean up layout and data:
+ a. fix the way Published is coming thru a 2021-05-09, make it more readable. Create a helper method.
+ b. if have already reviewed a book, take reader to edit page instead of new
  
 A. HTML/CSS LAYOUT
     1. Style reader profile info on readers show page
