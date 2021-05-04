@@ -1,8 +1,9 @@
-<h3> These books all received 5 stars! </h3>
+<center><h3> These books all received 5 stars! </h3></center>
+<div class="row">
 
-<% @books.each do |book| %>
+    <% @books.each do |book| %>
 
-<p>     
+    <div class="col-md-2">    
                 <div class="card" style="width: 10rem;">
                 <img src= "<%= book.image%>" class="card-img-top" alt="test">
                 <div class="card-body">
@@ -15,6 +16,7 @@
                 </div>
                 </div>
                     
-        </p> 
+    </div>
    
    <% end %>
+</div>
