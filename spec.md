@@ -58,7 +58,7 @@ Confirm:
 - [X] The application is pretty DRY
 	abstracted find_by into private methods in each controller, and used partials
 - [X] Limited logic in controllers
-	abstracted find_by into private methods in each controller
-- [ ] Views use helper methods if appropriate
+	abstracted find_by into private methods in each controller, made helper methods for logged_in?, current_reader, and authorized in application controller
+- [X] Views use helper methods if appropriate
 - [X] Views use partials if appropriate
 	Partials for _reader, _book, and _review forms, partial for layout _header, made _errors partial to render errors in the appropriate views.

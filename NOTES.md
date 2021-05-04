@@ -1,19 +1,14 @@
 BUILD LIST TARGETS
-*Refactoring/DRY*
-SPRINT 4
-- [ ] The application is pretty DRY
-- [X] Limited logic in controllers
-- [ ] Views use helper methods if appropriate
-- [X] Views use partials if appropriate
+[X] Project requirements met for MVP
 _____________________________
-M_V_P
+Before submitting, clean up layout:
  
 A. HTML/CSS LAYOUT
     1. Display reviews horizontally on the books show page, this is also something I need to find out how to do on the library or books index page, and profile page (readers show)
     2. Fix form pages
     3. Style Login/Signup/and all forms pages
     4. style reader profile info on readers show page
-    
+Finish:    
 B. README
     1. Complete and Fix Readme instructions in md format to reader friendly view
 ____________________________________    
@@ -31,12 +26,3 @@ ______________________________
 
 
 
-Sprint 5 - How Does it Look?/Facelift
-- [X]   Bootstrap- added basic bootstrap
-- [ ]   Styling
-- [ ]   Wireframing
-- [ ]   bf logo
-- [X]   Nav bar
-
-Sprint 6 - Instructor Review and Feedback Prior to Project Review
-- [ ]   Schedule meeting/ attend office hours with Aysan to go through App and write notes on what needs to be fixed

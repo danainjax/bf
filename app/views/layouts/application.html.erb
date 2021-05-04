@@ -15,7 +15,7 @@
     
     <%= render 'layouts/header' %>
      <% flash.each do |name, msg| -%>
-     <h3> <%= content_tag :div, msg, class: name %><h3>
+     <%= content_tag :div, msg, class: name %> 
     <% end %>
 
 
