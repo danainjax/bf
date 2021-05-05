@@ -13,7 +13,7 @@
     <% end %>
 
     <%= form_tag(books_path, method: :get) do %>
-    List <%= text_field_tag :genre, params[:genre] %>
+    List <%= select_tag(:genre, options_for_select([['Hardcover Fiction', 'Hardcover Fiction'], ['Hardcover Nonfiction','Hardcover Nonfiction'],['Celebrities','Celebrities'],['Hardcover Advice','Hardcover Advice'],['Family','Family'],['Food and Fitness','Food and Fitness'],['Culture','Culture'],['Young Adult','Young Adult'], ['Animals','Animals'], ['Business Books','Business Books'],['Manga','Manga']]))%>
     <%= submit_tag 'Search', name: nil %>
     <% end %>
 
@@ -27,6 +27,7 @@
             <img src= "<%= book.image%>" class="card-img-top" alt="test">
             <div class="card-body">
                 <p class="card-text"><%= link_to book.title.upcase, book_path(book[:id]) %><br>
+                <small><%= book.author %></small>
                 <%= book.genre %></p>
             </div>
             </div>
