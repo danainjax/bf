@@ -4,7 +4,8 @@ _____________________________
 Before submitting, clean up layout and data:
 A. Data Delivery
     1. Reviews index should display reviews listed under each book's image
-    2. Five Star page should only show each book once, even if someone rated it 5 more than once.
+    (Scope method, takes all the reviews, gets each book by id, then iterates over its reviews. Like how the book's show page, show's all it's reviews, but showing ALL the books that are reviewed- on the same page.)@book.reviews.each do |review|
+    
 B. FUNCTIONALITY: Reconfigure SEARCH capability/form with multiple dropdown bars for the books/index
 
 C. FLOW/REFACTOR
