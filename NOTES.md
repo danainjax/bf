@@ -5,16 +5,15 @@ Before submitting:
 A. Data Delivery
 1. Finish inputting all the book genres into the books search list feature on the index page
 
-
 B. FLOW/REFACTOR
  1.  Create a helper method for the way I am parsing the date in the books/show view
  2. if have already reviewed a book, take reader to edit page instead of new
+ 3. catch all for route hacking/route not found redirect
 
 C. HTML/CSS LAYOUT
     1. Style reader profile info on readers show page
     2. Add borders to login, signup, and form pages
    
- 
 D. README
     1. Complete and Fix Readme instructions in md format to reader friendly view
 ____________________________________    
@@ -22,7 +21,6 @@ STRETCH
 
 E. VALIDATIONS AND OMNIAUTH/FACEBOOK/GOOGLE
     1. Add logos=> buttons for social logins (google/fb)
-
 
 F. FEATURE REQUEST
     i. DATA//Add a link to the NY Times Book review or review on some website for the current book
