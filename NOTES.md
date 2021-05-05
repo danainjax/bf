@@ -2,21 +2,20 @@ BUILD LIST TARGETS
 [X] Project requirements met for MVP
 _____________________________
 Before submitting:
-a. Finish inputting all the book genres into the books search list feature on the index page
 A. Data Delivery
-    1. Reviews index should display reviews listed under each book's image
-    (Scope method, takes all the reviews, gets each book by id, then iterates over its reviews. Like how the book's show page, show's all it's reviews, but showing ALL the books that are reviewed- on the same page.)@book.reviews.each do |review|
+1. Finish inputting all the book genres into the books search list feature on the index page
 
-C. FLOW/REFACTOR
+
+B. FLOW/REFACTOR
  1.  Create a helper method for the way I am parsing the date in the books/show view
  2. if have already reviewed a book, take reader to edit page instead of new
 
-D. HTML/CSS LAYOUT
+C. HTML/CSS LAYOUT
     1. Style reader profile info on readers show page
     2. Add borders to login, signup, and form pages
    
  
-E. README
+D. README
     1. Complete and Fix Readme instructions in md format to reader friendly view
 ____________________________________    
 STRETCH
