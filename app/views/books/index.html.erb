@@ -1,22 +1,32 @@
+
 <center>
-<h3> Search </h3>
-
-
-    <%= form_tag(books_path, method: :get) do %>
-    Title <%= text_field_tag :title, params[:title] %>
-    <%= submit_tag 'Search', name: nil %>
-    <% end %>
-
-    <%= form_tag(books_path, method: :get) do %>
-    Author <%= text_field_tag :author, params[:author] %>
-    <%= submit_tag 'Search', name: nil %>
-    <% end %>
-
-    <%= form_tag(books_path, method: :get) do %>
-    List <%= select_tag(:genre, options_for_select([['Hardcover Fiction', 'Hardcover Fiction'], ['Hardcover Nonfiction','Hardcover Nonfiction'],['Celebrities','Celebrities'],['Hardcover Advice','Hardcover Advice'],['Family','Family'],['Food and Fitness','Food and Fitness'],['Culture','Culture'],['Young Adult','Young Adult'], ['Animals','Animals'], ['Business Books','Business Books'],['Manga','Manga']]))%>
-    <%= submit_tag 'Search', name: nil %>
-    <% end %>
-
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm"> 
+            <%= form_tag(books_path, method: :get) do %>
+            List <%= select_tag(:genre, options_for_select([['Hardcover Fiction', 'Hardcover Fiction'], ['Hardcover Nonfiction','Hardcover Nonfiction'],['Celebrities','Celebrities'],['Hardcover Advice','Hardcover Advice'],['Family','Family'],['Food and Fitness','Food and Fitness'],['Culture','Culture'],['Young Adult','Young Adult'], ['Animals','Animals'], ['Business Books','Business Books'],['Manga','Manga']]))%>
+            <%= submit_tag 'Search', name: nil %>
+            <% end %>
+            
+        </div>
+        <div class="col-sm">
+            <%= form_tag(books_path, method: :get) do %>
+            Author <%= text_field_tag :author, params[:author] %>
+            <%= submit_tag 'Search', name: nil %>
+            <% end %>
+        </div>
+        <div class="col-sm">
+            <%= form_tag(books_path, method: :get) do %>
+            Title <%= text_field_tag :title, params[:title] %>
+            <%= submit_tag 'Search', name: nil %>
+            <% end %>
+        </div>
+       
+    </div>
+</div>
+<br>
+<br>
 
 <div class="row">
 

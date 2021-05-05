@@ -14,7 +14,7 @@ C. FLOW/REFACTOR
 D. HTML/CSS LAYOUT
     1. Style reader profile info on readers show page
     2. Add borders to login, signup, and form pages
-    3. Re-style search bars to lay them out horizontally on the page instead of stacked.
+   
  
 E. README
     1. Complete and Fix Readme instructions in md format to reader friendly view
