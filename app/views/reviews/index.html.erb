@@ -1,24 +1,24 @@
 <center>
     <% if !@book && !@reader %>
         <% @reviews.each do |book| %>
-   
+  
+    
+        <div class="card" style="width: 15rem;">
+            <img src= "<%= book.image%>" class="card-img-top" alt="test">
+                <p class="card-text"><%= link_to book.title, book_path(book.id) %><br>
+                <% book.reviews.each do |review| %>
+                    <div class="card-body">
+                        <ul><%= review.book_review %>-<%= review.reader.username %></ul>
+                    
+                 <% end %>
+                    </div>
         </div>
         
-            <img src= "<%= book.image%>" class="d-block w-15">
-                <p class="card-text"><%= link_to book.title, book_path(book.id) %><br>
-                <div class="card-body">
-                <% book.reviews.each do |review| %>
-                <ul><%= review.book_review %>-<%= review.reader.username %></ul>
-                    <% end %>
-                <% end %>
-             
-            
-    
-            </div>
+    <% end %>
         </div>
-    </div>
- 
-    </div>
+</div>
+ <br>
+    
 </center>
 
         <% else %>
