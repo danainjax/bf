@@ -5,6 +5,7 @@ Before submitting:
 
 A. FLOW/REFACTOR
  1. catch all for route hacking/route not found redirect
+ 2. Group reviews on profile page by status (scope method, order by status)
 
 B. HTML/CSS LAYOUT
     1. Style reader profile info on readers show page

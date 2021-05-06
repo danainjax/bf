@@ -7,5 +7,6 @@ class Review < ApplicationRecord
     validates :star_rating, :status, presence: true
 
     scope :by_the_book, ->{order(:book_id)}
+    scope :status, ->{order('status DESC')}
     
 end

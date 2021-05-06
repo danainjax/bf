@@ -38,7 +38,8 @@
                                 <p class="card-text"><%= link_to review.book.title, book_path(review.book.id) %><br>
                                 <h3><%= review.star_rating %></h3>
                                 <%= review.book_review %><br>
-                                -<%= review.reader.username %>
+                                -<%= review.reader.username %><br>
+                                <%= review.status %><br>
                                 <% if current_reader.id == review.reader_id %>
                                         <%= link_to "edit", edit_review_path(review) %><br>
                                         

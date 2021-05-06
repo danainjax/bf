@@ -9,7 +9,8 @@
 
     <h3><%= link_to "Write a Review!", new_book_review_path(@book) %></h3><br>
 <% else %>
-    <%=  link_to "Edit my Review", reader_reviews_path(current_reader) %><br>
+    <%=  link_to "Edit my Review", book_reviews_path(@book) %><br>
+    
 <% end %> 
     Author: <%= @book.author %><br>
     Published: <%= @book.published.to_time.strftime('%b %d, %Y') %>

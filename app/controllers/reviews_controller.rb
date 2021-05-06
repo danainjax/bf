@@ -33,7 +33,7 @@ class ReviewsController < ApplicationController
         else
             @reader = Reader.find_by(id: params[:reader_id])
             if params[:reader_id] && !@reader.nil?
-                @reviews = @reader.reviews
+                @reviews = @reader.reviews.status
             else
                 @books = Book.all
                 @reviews = @books.grouped_reviews

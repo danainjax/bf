@@ -18,7 +18,7 @@
 <div class="row">
 
     <% @reviews = current_reader.reviews %>
-    <% @reviews.each do |review| %>
+    <% @reviews.status.each do |review| %>
     <div class="col-md-2">
         <div class="card" style="width: 10rem;">
         <img src= "<%= review.book.image%>" class="card-img-top" alt="test">
