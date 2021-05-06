@@ -2,19 +2,17 @@ BUILD LIST TARGETS
 [X] Project requirements met for MVP
 _____________________________
 Before submitting:
-A. Data Delivery
-1. Finish inputting all the book genres into the books search list feature on the index page
 
-B. FLOW/REFACTOR
+A. FLOW/REFACTOR
  1.  Create a helper method for the way I am parsing the date in the books/show view
  2. if have already reviewed a book, take reader to edit page instead of new
  3. catch all for route hacking/route not found redirect
 
-C. HTML/CSS LAYOUT
+B. HTML/CSS LAYOUT
     1. Style reader profile info on readers show page
     2. Add borders to login, signup, and form pages
    
-D. README
+C. README
     1. Complete and Fix Readme instructions in md format to reader friendly view
 ____________________________________    
 STRETCH

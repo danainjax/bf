@@ -3,20 +3,25 @@
         <% @reviews.each do |book| %>
   
     
-        <div class="card" style="width: 15rem;">
-            <img src= "<%= book.image%>" class="card-img-top" alt="test">
-                <p class="card-text"><%= link_to book.title, book_path(book.id) %><br>
+        <div class="card-deck" style="width: 15rem;">
+            <img src= "<%= book.image%>" class="card-img-top" alt="test"><br>
+                <h5><p class="card-text"><%= link_to book.title, book_path(book.id) %></h5>
                 <% book.reviews.each do |review| %>
                     <div class="card-body">
-                        <ul><%= review.book_review %>-<%= review.reader.username %></ul>
-                    
+                        <figure class="text-end">
+                            <blockquote class="blockquote">
+                                <p><%= review.book_review %></p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer"><%= review.reader.username %></figcaption>
+                        </figure>
                  <% end %>
                     </div>
         </div>
+        <br>
         
     <% end %>
         </div>
-</div>
+
  <br>
     
 </center>
