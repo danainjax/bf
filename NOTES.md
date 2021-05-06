@@ -4,8 +4,7 @@ _____________________________
 Before submitting:
 
 A. FLOW/REFACTOR
- 2. if have already reviewed a book, take reader to edit page instead of new
- 3. catch all for route hacking/route not found redirect
+ 1. catch all for route hacking/route not found redirect
 
 B. HTML/CSS LAYOUT
     1. Style reader profile info on readers show page
