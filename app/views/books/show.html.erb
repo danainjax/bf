@@ -1,11 +1,11 @@
 <h1><%= @book.title.upcase %> </h1>
 
 <hr>
-<%= link_to "Buy From Amazon",  @book.link_to_purchase, :target => "_blank" %><br>
+<%= link_to "Buy From Amazon" ,  @book.link_to_purchase, :target => "_blank" %><img src="/images/amazon.png" width=5% height=5%><br><br>
 
-<%= link_to "review", new_book_review_path(@book) %><br>
+<h3><%= link_to "Write a Review!", new_book_review_path(@book) %></h3><br>
 Author: <%= @book.author %><br>
-Published: <%= @book.published.to_time.strftime('%b %d, %Y') %><br>
+Published: <%= @book.published.to_time.strftime('%b %d, %Y') %>
 Publisher: <%= @book.publisher %><br>
 Description: <%= @book.description %><br>
 Best Seller List: <%= @book.genre %><br><br>

@@ -4,7 +4,6 @@ _____________________________
 Before submitting:
 
 A. FLOW/REFACTOR
- 1.  Create a helper method for the way I am parsing the date in the books/show view
  2. if have already reviewed a book, take reader to edit page instead of new
  3. catch all for route hacking/route not found redirect
 
