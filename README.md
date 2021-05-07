@@ -8,13 +8,20 @@
 2.6.6
 
 ## System dependencies
-bundle
+```
+bundle install
+```
 
 
 ## Database creation and initialization
-    *rails db:migrate
-    *rails db:seed (only seed 10 calls at a time, or the Times API will throw an error. )
-    *Key and secret credentials needed from https://developer.nytimes.com/docs/books-product/1/overview
+```
+rails db:migrate
+```
+```
+rails db:seed 
+```
+*(only seed 10 calls at a time, or the Times API will throw an error. )
+*Key and secret credentials needed from https://developer.nytimes.com/docs/books-product/1/overview
 
 
 ## Deployment instructions
