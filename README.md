@@ -1,14 +1,13 @@
 # README
 
 ## bookface (or bf for short)
-
-     An app that allows you to view New York Times Bestsellers, see descriptions, reviews, write reviews, and link to Amazon for purchase.
+bookface is an app that allows you to view New York Times Bestsellers, see descriptions, reviews, write reviews, and link to Amazon for purchase.
 
 ## Video Walkthrough
 
 <a href="https://www.youtube.com/user/DanawithaD/featured" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="bookface walkthrough" width="240" height="180" border="10" /></a>
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![bookface walkthrough](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 
 ## Built with: Ruby version
 2.6.6
