@@ -1,18 +1,20 @@
 BUILD LIST TARGETS
 [X] Project requirements met for MVP
-_____________________________
-Friday:
-A. Record 30 minutes live coding:
-
-B. README
-    1. Complete and Fix Readme instructions in md format to reader friendly view
-
-C. Outline and first draft Blog Post
-
+______________________________
 Saturday:
-Final draft Blog post/publish
-Record Video Walkthrough
-Submit Project and schedule assessment
+A. Record 30 minutes live coding
+___________________________________
+
+B. Outline and first draft Blog Post
+
+C. Revise Blog post
+
+D. Publish Medium Blog 
+____________________________________
+
+E. Record Video Walkthrough
+
+F. Submit Project and schedule assessment
 
 ____________________________________    
 STRETCH
