@@ -25,7 +25,7 @@ bookface is an app that allows you to view New York Times Bestsellers, see descr
 'rails db:seed' 
 ```
     **IMPORTANT** (only seed 10 calls at a time, or the Times API will throw an error. )
-    Key and secret credentials needed from https://developer.nytimes.com/docs/books-product/1/overview
+    Key and secret credentials needed from [https://developer.nytimes.com/docs/books-product/1/overview]
 
 
 ## Deployment instructions
