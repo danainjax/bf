@@ -4,12 +4,10 @@ _____________________________
 Friday:
 A. Record 30 minutes live coding:
 
-1. Catch all for route hacking/route not found redirect
-
-2. README
+B. README
     1. Complete and Fix Readme instructions in md format to reader friendly view
 
-3. Outline and first draft Blog Post
+C. Outline and first draft Blog Post
 
 Saturday:
 Final draft Blog post/publish
