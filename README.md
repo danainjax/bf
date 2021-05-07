@@ -8,10 +8,9 @@
 2.6.6
 
 ## System dependencies
-
+```
 'bundle install'
-
-
+```
 
 ## Database creation and initialization
 ```
