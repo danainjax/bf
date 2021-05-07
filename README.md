@@ -1,21 +1,29 @@
 # README
 
-## bf
+## bookface (or bf for short)
 
-(Short for bookface) - an application that allows you to view New York Time's Bestsellers, see descriptions, reviews, write reviews, and link to Amazon for purchase.
+An app that allows you to view New York Times Bestsellers, see descriptions, reviews, write reviews, and link to Amazon for purchase.
 
-* Ruby version
-    2.6.6
+## Built with: Ruby version
+    * 2.6.6
 
-* System dependencies
-    bundle
-
-
-* Database creation and initialization
-    rails db:migrate
-    rails db:seed
+## System dependencies
+    * bundle
 
 
-* Deployment instructions
+## Database creation and initialization
+    * rails db:migrate
+    * rails db:seed (only seed 10 calls at a time, or the Times API will throw an error. )
+    * Key and secret credentials needed from https://developer.nytimes.com/docs/books-product/1/overview
+
+
+## Deployment instructions
+    * To start the local server, run 'rails s'
+
+## License
+    * This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgements
+    * Created for Flatiron School Rails Portfolio Project
 
 
