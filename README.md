@@ -18,7 +18,10 @@ bundle
 
 
 ## Deployment instructions
-To start the local server, run 'rails s'
+To start the local server, run
+```
+rails s
+```
 
 ## Author
 **Dana Pughakoff** - [danainjax](https://github.com/danainjax)
