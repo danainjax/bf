@@ -9,25 +9,25 @@
 
 ## System dependencies
 ```
-bundle install
+'bundle install'
 ```
 
 
 ## Database creation and initialization
 ```
-rails db:migrate
+'rails db:migrate'
 ```
 ```
-rails db:seed 
+'rails db:seed' 
 ```
-    (only seed 10 calls at a time, or the Times API will throw an error. )
-    Key and secret credentials needed from https://developer.nytimes.com/docs/books-product/1/overview
+    *(only seed 10 calls at a time, or the Times API will throw an error. )
+    *Key and secret credentials needed from https://developer.nytimes.com/docs/books-product/1/overview
 
 
 ## Deployment instructions
 To start the local server, run
 ```
-rails s
+'rails s'
 ```
 
 ## Author
