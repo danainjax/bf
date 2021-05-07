@@ -45,6 +45,7 @@ class ReadersController < ApplicationController
     end
 
     def destroy
+        delete_reader_data
         @reader.destroy
         session.clear
         redirect_to root_path

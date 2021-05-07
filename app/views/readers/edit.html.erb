@@ -4,5 +4,6 @@
 <div class="border-class">
 <%= render 'reader' %><br>
 <%= button_to "Delete Reader Profile/Account", reader_path(@reader), method: :delete %>
+<%= flash[:warning] = "All reviews will be deleted when you delete your account." %>
 </div>
 </center>
