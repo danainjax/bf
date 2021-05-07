@@ -2,7 +2,7 @@
 
 ## bookface (or bf for short)
 
-An app that allows you to view New York Times Bestsellers, see descriptions, reviews, write reviews, and link to Amazon for purchase.
+    * An app that allows you to view New York Times Bestsellers, see descriptions, reviews, write reviews, and link to Amazon for purchase.
 
 ## Built with: Ruby version
     * 2.6.6
