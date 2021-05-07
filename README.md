@@ -24,7 +24,7 @@ To start the local server, run 'rails s'
 **Dana Pughakoff** - [danainjax](https://github.com/danainjax)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgements
 Created for Flatiron School Rails Portfolio Project
