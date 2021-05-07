@@ -1,4 +1,5 @@
 <center>
+
 <h1>Book Review</h1>
  by <%= current_reader.username %><br>
     <%= render 'layouts/profile_pic' %>
@@ -6,6 +7,8 @@
         <h3><%= @review.book.title %></h3> <img src="<%= @review.book.image %>" height=10% width = 10%>
     <% end %>
 
-<%= render "layouts/errors", :object => @review %>
-<%= render 'review' %>
+<div class="border-class">
+    <%= render "layouts/errors", :object => @review %>
+    <%= render 'review' %>
+</div>
 </center>

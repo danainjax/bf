@@ -1,6 +1,8 @@
 <center>
 <h1>Update Account</h1>
 <%= render "layouts/errors", :object => @reader %>
+<div class="border-class">
 <%= render 'reader' %><br>
 <%= button_to "Delete Reader Profile/Account", reader_path(@reader), method: :delete %>
+</div>
 </center>

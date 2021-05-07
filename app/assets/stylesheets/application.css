@@ -19,4 +19,12 @@
     display: table;
   }
 
-  
+.border-class
+{
+  border:thin black solid;
+  margin:20px;
+  padding:20px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: lightgray;
+}
