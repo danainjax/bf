@@ -1,6 +1,6 @@
 
 
-<%= bootstrap_form_with model: @review, class:"w-75"  do |f| %>
+<%= bootstrap_form_with model: @review do |f| %>
   
   <%= f.hidden_field :reader_id, :value => current_reader.id %> <br><br>
 

@@ -1,14 +1,16 @@
 <center>
 
-<h1>Book Review</h1>
- by <%= current_reader.username %><br>
-    <%= render 'layouts/profile_pic' %>
+<h1>Book Review</h1> <small>by <%= current_reader.username %></small><br>
+<%= render 'layouts/profile_pic' %><br>
+    
    <% if params[:book_id] %> 
-        <h3><%= @review.book.title %></h3> <img src="<%= @review.book.image %>" height=10% width = 10%>
+
+    <img src="<%= @review.book.image %>" style= height= 150px; width= 150px; >
+        <h3><%= @review.book.title %></h3> 
     <% end %>
 
-<div class="border-class">
-    <%= render "layouts/errors", :object => @review %>
+<%= render "layouts/errors", :object => @review %>
+<div class="border-class" style="width: 50%;">
     <%= render 'review' %>
 </div>
 </center>

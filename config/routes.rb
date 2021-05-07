@@ -19,7 +19,10 @@ Rails.application.routes.draw do
     resources :reviews, shallow: true
     #shallow gives me [:index, :new, :create]
   end
+  get '*all', to: 'books#index', constraints: lambda { |req|
+    req.path.exclude? 'rails/active_storage'
+  }
+  # catch-all for incorrect routes, back to the books index, had to exclude active storage, solution from github
   
-  # get '*path', to: 'books#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
