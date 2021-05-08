@@ -1,15 +1,11 @@
 BUILD LIST TARGETS
-[X] Project requirements met for MVP
-______________________________
 
 B. Outline and first draft Blog Post
 
 C. Revise Blog post
 
 D. Publish Medium Blog 
-____________________________________
 
-E. Record Video Walkthrough
 
 F. Submit Project and schedule assessment
 

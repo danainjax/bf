@@ -7,7 +7,7 @@ bookface is an app that allows you to view New York Times Bestsellers, see descr
 
 <a href="https://www.youtube.com/user/DanawithaD/featured" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="bookface walkthrough" width="240" height="180" border="10" /></a>
 
-[![bookface walkthrough](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![bookface walkthrough](http://img.youtube.com/vi/zad8X9gKJjY/0.jpg)](https://www.youtube.com/watch?v=zad8X9gKJjY
 
 ## Built with: Ruby version
 2.6.6
