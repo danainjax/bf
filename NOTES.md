@@ -1,13 +1,3 @@
-BUILD LIST TARGETS
-
-B. Outline and first draft Blog Post
-
-C. Revise Blog post
-
-D. Publish Medium Blog 
-
-
-F. Submit Project and schedule assessment
 
 ____________________________________    
 STRETCH
