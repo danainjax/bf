@@ -1,6 +1,7 @@
 class ReadersController < ApplicationController
     skip_before_action :authorized, only: [:new, :create]
     before_action :set_reader, except: [:new, :create]
+    before_action :set_genres
     
     
 
@@ -30,6 +31,7 @@ class ReadersController < ApplicationController
     end
 
     def edit
+        
         if !@reader || !@reader.id == session[:reader_id]
             redirect_to '/'
         end

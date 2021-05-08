@@ -1,9 +1,6 @@
 BUILD LIST TARGETS
 [X] Project requirements met for MVP
 ______________________________
-Saturday:
-A. Record 30 minutes live coding
-___________________________________
 
 B. Outline and first draft Blog Post
 

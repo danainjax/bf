@@ -11,7 +11,7 @@
     
     <%= f.text_field :last_name%>
    
-    <%= f.text_field :favorite_genre%>
+    <%= f.select :favorite_genre, options_for_select(@options)%>
    
     <%= f.text_field :favorite_book%>
     

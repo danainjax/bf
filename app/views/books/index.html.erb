@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-sm"> 
             <%= form_tag(books_path, method: :get) do %>
-            List <%= select_tag(:genre, options_for_select([['Hardcover Fiction', 'Hardcover Fiction'], ['Hardcover Nonfiction','Hardcover Nonfiction'],['Celebrities','Celebrities'],['Hardcover Advice','Hardcover Advice'],['Family','Family'],['Food and Fitness','Food and Fitness'],['Culture','Culture'],['Young Adult','Young Adult'], ['Health','Health'], ['Humor','Humor'], ['Mass Market Paperback','Mass Market Paperback'], ['Paperback Advice','Paperback Advice'], ['Trade Fiction Paperback', 'Trade Fiction Paperback'], ['Travel', 'Travel'], ['Animals','Animals'], ['Business Books','Business Books'],['Hardcover Political Books','Hardcover Political Books'], ['Manga','Manga'], ['Picture Books','Picture Books'],['Hardcover Graphic Books','Hardcover Graphic Books'], ['Race and Civil Rights', 'Race and Civil Rights'], ['Religion Spirituality and Faith', 'Religion Spirituality and Faith'], ['Science', 'Science'], ['Sports', 'Sports'], ['Combined Print and E-Book Fiction','Combined Print and E-Book Fiction'],['Combined Print and E-Book NonFiction','Combined Print and E-Book NonFiction']]))%>
+            List <%= select_tag(:genre, options_for_select(@options))%>
             <%= submit_tag 'Search', name: nil %>
             <% end %>
             

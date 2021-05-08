@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
 
     before_action :set_book, only: [:show, :edit, :update, :destroy]
+    before_action :set_genres, only: [:index]
 
     def new
         @book = Book.new
