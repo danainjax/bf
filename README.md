@@ -5,7 +5,6 @@ bookface is an app that allows you to view New York Times Bestsellers, see descr
 
 ## Video Walkthrough
 
-<a href="https://www.youtube.com/watch?v=zad8X9gKJjY" target="_blank"><img src="http://img.youtube.com/vi/https://zad8X9gKJjY/0.jpg" alt="bookface walkthrough" width="240" height="180" border="10" /></a>
 
 [![bookface walkthrough](http://img.youtube.com/vi/zad8X9gKJjY/0.jpg)](https://www.youtube.com/watch?v=zad8X9gKJjY)
 
