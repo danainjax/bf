@@ -9,14 +9,28 @@
 
     <h3><%= link_to "Write a Review!", new_book_review_path(@book) %></h3><br>
 <% else %>
-    <%=  link_to "Edit my Review", book_reviews_path(@book) %><br>
+  <h3> <%=  link_to "Edit my Review", book_reviews_path(@book) %></h3><br>
     
 <% end %> 
-    Author: <%= @book.author %><br>
-    Published: <%= @book.published.to_time.strftime('%b %d, %Y') %>
-    Publisher: <%= @book.publisher %><br>
-    Description: <%= @book.description %><br>
-    Best Seller List: <%= @book.genre %><br><br>
+<table class="table table-info">
+    <tr>
+        <th>Author</th> 
+        <th>Publisher</th> 
+        <th>Published</th>
+        <th>Best Seller List</th> 
+    </tr>
+    <td><%= @book.author %></td> 
+    <td><%= @book.publisher %></td>
+    <td><%= @book.published.to_time.strftime('%b %d, %Y') %></td>
+    <td><%= @book.genre %></td>
+ </table>   
+ <br>
+ <% if @book.description? %>
+    <blockquote class="blockquote">
+        <p class="mb-0"><%= @book.description %></p>   
+    </blockquote><br>
+<% end %>
+    
     <img src= "<%= @book.image %>" height ="329" width "500" ><br>
   
     <center>
