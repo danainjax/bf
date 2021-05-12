@@ -34,9 +34,9 @@ class SessionsController < ApplicationController
 
   #this is logging in
   def create
-    reader = Reader.find_by(username: params[:session][:username])
+    reader = Reader.find_by(username: params[:username])
     #finds the user by username key in the params
-    if reader && reader.authenticate(params[:session][:password])
+    if reader && reader.authenticate(params[:password])
       #if the reader username is found in the params and the password authenticates...
       session[:reader_id] = reader.id
       #then create a new key in sessions hash, setting it equal to existing user's id
@@ -49,7 +49,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete(:reader_id)
-    current_reader = nil
     flash[:notice] = "You have successfully logged out of bookface. Your books are saved."
     redirect_to root_path
   end
