@@ -5,15 +5,12 @@
             
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">bookface</a>
+            <a class="navbar-brand" <%= link_to "bookface", root_path %></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
                 <li class="nav-item">
                 <h5><a class="nav-link", color <%= link_to "Best Sellers", books_path %></h5>
                 </li>
@@ -21,7 +18,7 @@
                 <a class="nav-link" <%= link_to "Profile", current_reader %>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" <%= link_to "Bookface Reviews", reviews_path %>
+                <a class="nav-link" <%= link_to "Reviews", reviews_path %>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link"<%= link_to "New Review", new_review_path%>
@@ -45,9 +42,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
                 <li class="nav-item">
                 <a class="nav-link" <%= link_to "Log in", login_path %>
                 </li>
