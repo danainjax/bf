@@ -1,14 +1,17 @@
 <center>
 
-<h2><%= @reader.username %></h2>
+<h1 class="display-4"><%= @reader.username %></h1>
 <%= render 'layouts/profile_pic' %>
 <div class="border-class">
+    <p class="lead">
     Username: <%= @reader.username%><br>
     Name: <%= @reader.first_name %> <%= @reader.last_name %><br>
     Email: <%= @reader.email %><br>
     Favorite Genre: <%= @reader.favorite_genre%><br>
     Favorite Book: <%= @reader.favorite_book %><br><br>
-    <%= link_to "edit", edit_reader_path(@reader) %><br>
+    
+    <%= link_to "edit", edit_reader_path(@reader) %>
+    </p><br>
 </div>
 
 <hr>
