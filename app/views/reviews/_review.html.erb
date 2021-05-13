@@ -12,7 +12,7 @@
       <% end %>
   <%= f.text_area :book_review %><br>
 
-  <%= f.select :star_rating, [5,4,3,2,1], prompt: "Select a star rating" %><br>
+  <%= f.select :star_rating, [5,4,3,2,1, ""], prompt: "Select a star rating" %><br>
 
   <%= f.submit  %>
 <% end %>
