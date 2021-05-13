@@ -1,15 +1,15 @@
 <h1 class="display-4"><%= @book.title.upcase %> </h1>
 
 <hr>
-<h3><%= link_to "Buy From Amazon" ,  @book.link_to_purchase, :target => "_blank" %></h3><img src="/images/amazon.png" width=5% height=5%><br><br>
+<h3><%= button_to "Buy From Amazon" ,  @book.link_to_purchase, method: :get, :target => "_blank" %></h3><img src="/images/amazon.png" width=5% height=5%><br><br>
 
 
 
 <% if  current_reader.reviews.find_by(book_id: params[:id]) == nil %>
 
-    <h3><%= link_to "Write a Review!", new_book_review_path(@book) %></h3><br>
+    <h3><%= button_to "Add to my shelf", new_book_review_path(@book), method: :get %></h3><br>
 <% else %>
-  <h3> <%=  link_to "Edit my Review", book_reviews_path(@book) %></h3><br>
+  <h3> <%= button_to  "Edit my Review", book_reviews_path(@book) %></h3><br>
     
 <% end %> 
 <table class="table table-info">
