@@ -3,7 +3,7 @@
 <%= render "layouts/errors", :object => @reader %>
 <div class="border-class">
 <%= render 'reader' %><br>
-<%= button_to "Delete Reader Profile/Account", reader_path(@reader), method: :delete %>
-<%= flash[:warning] = "All reviews will be deleted when you delete your account." %>
+<%= button_to "Delete Reader Profile/Account", reader_path(@reader), method: :delete, data: {confirm: "Are you sure? All reviews will be deleted with your user profile."} %>
+
 </div>
 </center>
