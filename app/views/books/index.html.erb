@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-sm"> 
             <%= form_tag(books_path, method: :get) do %>
-            List <%= select_tag(:genre, options_for_select(@options))%>
+            List <%= select_tag(:genre, options_for_select(@options), prompt: "Please select")%>
             <%= submit_tag 'Search', name: nil %>
             <% end %>
             
