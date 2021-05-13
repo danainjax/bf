@@ -10,7 +10,6 @@ class BooksController < ApplicationController
     def create
         # byebug
        @book = Book.new(book_params)
-        @book.save 
         if @book.save
             redirect_to book_path(@book)
         else
@@ -51,7 +50,7 @@ class BooksController < ApplicationController
     end
 
     def five_star
-        @books = Book.all.five_star
+        @books = Book.five_star
         # binding.pry
     end
     
