@@ -4,15 +4,15 @@
   
   <%= f.hidden_field :reader_id, :value => current_reader.id %> <br><br>
 
-  <%= f.select :status, ["Want to Read", "Currently Reading", "Read"] %><br><br>
+  <%= f.select :status, ["Want to Read", "Currently Reading", "Read"], prompt: "Select a status"  %><br><br>
     <% if params[:book_id] %> 
       <%= f.hidden_field :book_id %> 
     <% else %>
-      <%= f.collection_select :book_id, Book.all, :id, :title %><br>
+      <%= f.collection_select :book_id, Book.all, :id, :title , prompt: "Select a title"%><br>
       <% end %>
   <%= f.text_area :book_review %><br>
 
-  <%= f.select :star_rating, [5,4,3,2,1] %><br>
+  <%= f.select :star_rating, [5,4,3,2,1], prompt: "Select a star rating" %><br>
 
   <%= f.submit  %>
 <% end %>
