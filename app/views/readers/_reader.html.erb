@@ -11,7 +11,7 @@
     
     <%= f.text_field :last_name%>
    
-    <%= f.select :favorite_genre, options_for_select(@options)%>
+    <%= f.select :favorite_genre, options_for_select(@options), prompt: "Please select"%>
    
     <%= f.text_field :favorite_book%>
     
