@@ -44,7 +44,7 @@ class BooksController < ApplicationController
                 elsif params[:genre]
                     @books = Book.where('genre LIKE ?', "#{params[:genre]}")
             else
-                @books = Book.all.genre
+                @books = Book.genre
             end
        
     end
