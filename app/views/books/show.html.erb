@@ -21,7 +21,7 @@
     </tr>
     <td><%= @book.author %></td> 
     <td><%= @book.publisher %></td>
-    <td><%= @book.published.to_time.strftime('%b %d, %Y') %></td>
+    <td><%= full_date(@book.published) %></td>
     <td><%= @book.genre %></td>
  </table>   
  <br>
