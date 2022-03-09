@@ -284,7 +284,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
-  X86_64-linux
+  x86_64-linux
   x86_64-darwin-19
 
 DEPENDENCIES
