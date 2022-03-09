@@ -17,7 +17,6 @@ Book.get_list("business-books")
 Book.get_list("picture-books")
 Book.get_list("combined-print-and-e-book-fiction")
 
-# Book.get_list("combined-print-and-e-book-nonfiction")
 # Book.get_list("trade-fiction-paperback")
 # Book.get_list("mass-market-paperback")
 # Book.get_list("paperback-advice")
