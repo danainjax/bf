@@ -6,7 +6,7 @@ class Book < ApplicationRecord
     validates :title, presence: true, uniqueness: { case_sensitive: false }
     validates :author, presence: true
 
-    scope :genre, ->{order(:published_date)}
+    scope :genre, ->{order(:created_at)}
     scope :five_star, ->{joins(:reviews).distinct.where("reviews.star_rating == 5")}
     scope :grouped_reviews, ->{joins(:reviews).group('reviews.book_id')}
 
