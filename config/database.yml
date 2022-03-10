@@ -12,6 +12,7 @@ default: &default
 development:
   <<: *default
   # database: db/development.sqlite3
+
   database: bookface_development
 
 # Warning: The database defined as "test" will be erased and
