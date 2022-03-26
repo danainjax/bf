@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
   skip_before_action :authorized
+  skip_before_action :protect_from_forgery, raise: false
+  
   def new 
   end
 
