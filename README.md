@@ -1,6 +1,6 @@
 # README
 
-This app is now hosted on Heroku, check it out at https://bookface-danainjax.herokuapp.com/
+## This app is now hosted on Heroku, check it out at https://bookface-danainjax.herokuapp.com/
 
 ## bookface (or bf for short)
 
