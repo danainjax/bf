@@ -12,7 +12,7 @@
                             <blockquote class="blockquote">
                                 <p><%= review.book_review %></p>
                             </blockquote>
-                            <figcaption class="blockquote-footer"><%= review.reader.username %></figcaption>
+                            <figcaption class="blockquote-footer"><%= review.reader.try(:username) %></figcaption>
                         </figure>
                  <% end %>
                     </div>
@@ -38,7 +38,7 @@
                                 <p class="card-text"><%= link_to review.book.title, book_path(review.book.id) %><br>
                                 <h3><%= review.star_rating %></h3>
                                 <%= review.book_review %><br>
-                                -<%= review.reader.username %><br>
+                                -<%= review.reader.try(:username) %><br>
                                 <%= review.status %><br>
                                 <% if current_reader.id == review.reader_id %>
                                         <%= link_to "edit", edit_review_path(review) %><br>
