@@ -7,8 +7,9 @@ class Book < ApplicationRecord
     validates :author, presence: true
 
     scope :genre, ->{order(:created_at)}
-    scope :five_star, ->{joins(:reviews).distinct.where("reviews.star_rating == 5")}
-    scope :grouped_reviews, ->{joins(:reviews).group('reviews.book_id')}
+    scope :five_star, ->{joins(:reviews).distinct.where(`reviews.star_rating == "5"`)}
+    scope :grouped_reviews, ->{joins(:reviews).group(:reviews, 'books.id')}
+    
 
     def self.get_list(list)
        
