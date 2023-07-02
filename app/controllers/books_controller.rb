@@ -36,6 +36,8 @@ class BooksController < ApplicationController
     end
 
     def index
+       
+    
         
             if params[:title]
                 @books = Book.where('title LIKE ?', "%#{params[:title].upcase}%")
@@ -44,6 +46,7 @@ class BooksController < ApplicationController
                 elsif params[:genre]
                     @books = Book.where('genre LIKE ?', "#{params[:genre]}")
             else
+                
                 @books = Book.genre
             end
        
