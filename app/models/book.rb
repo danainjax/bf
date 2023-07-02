@@ -27,5 +27,13 @@ class Book < ApplicationRecord
               
         end
     end
-
+    def self.sorted_books
+        genre_order = ["Hardcover Fiction", "Trade Fiction Paperback", "Hardcover Nonfiction", "Mass Market Paperback", "combined-print-and-e-book-fiction", "Hardcover Advice", "Culture", "Hardcover Political Books", "Food and Fitness", "Humor", "Paperback Advice", "Health", "Travel", "Young Adult", "Animals", "Celebrities", "Business Books", "Picture Books", "Hardcover Graphic Books", "Manga", "Sports", "Science", "Religion Spirituality and Faith", "Family", "Race and Civil Rights"]
+      
+        books_array = self.all.to_a
+      
+        books_array.sort_by { |book| genre_order.index(book.genre) || genre_order.size }
+      end
+      
+   
 end
