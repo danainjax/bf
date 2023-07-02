@@ -19,8 +19,12 @@ class Book < ApplicationRecord
         book_details = (list)["books"]
         #create a Ruby book object with all the info in the books array, use an iterator
         book_details.each do |book|
+            
             self.create(title: book["title"], author: book["author"], publisher: book["publisher"], description: book["description"], image: book["book_image"], link_to_purchase: book["amazon_product_url"], genre: (list)["list_name"], published: (list)["published_date"]) 
-        
+           
+                sleep(1) # sleep for 1 second
+            
+              
         end
     end
 
