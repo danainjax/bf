@@ -35,3 +35,15 @@ body {
   display: inline-block;
   background-color: lightgray;
 }
+
+nav {
+  background-color: #1166bb;
+}
+
+a.nav-link {
+  color: white !important;
+}
+
+a.navbar-brand {
+  color: white !important;
+}
