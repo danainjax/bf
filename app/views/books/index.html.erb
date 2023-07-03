@@ -33,8 +33,8 @@
     <% @books.sorted_books.each do |book| %>
 
        <div class="col-md-2"> 
-            <div class="card" style="width: 10rem;">
-            <img src= "<%= book.image%>" class="card-img-top" alt="test">
+            <div class="card" style="width: 17rem; border-radius: 5%">
+            <img src= "<%= book.image%>" class="card-img-top" alt="test" style="border-radius: 5%" >
             <div class="card-body">
                 <p class="card-text"><%= link_to book.title.upcase, book_path(book[:id]) %><br>
                 <small><%= book.author %></small><br>
