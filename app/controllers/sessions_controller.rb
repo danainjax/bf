@@ -56,7 +56,7 @@ class SessionsController < ApplicationController
     if reader
       session[:reader_id] = reader.id
       flash[:message] = "You have logged in as a Guest."
-      redirect_to reader
+      redirect_to '/index.html'
     else
       flash[:message] = "Guest user not found."
       redirect_to login_path
