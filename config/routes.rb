@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get    'signup' => 'readers#new'
   get    'login' => 'sessions#new'
   post   'login' => 'sessions#create'
+  post '/guest_login', to: 'sessions#guest_login'
   delete 'logout' => 'sessions#destroy'
   get '/auth/:provider/callback', to: 'sessions#omniauth'
   get 'five_star' => 'books#five_star'
