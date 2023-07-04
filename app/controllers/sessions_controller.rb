@@ -49,6 +49,20 @@ class SessionsController < ApplicationController
     end
   end
 
+  def guest_login
+
+    reader = Reader.find_by(username: "Guest")
+  
+    if reader
+      session[:reader_id] = reader.id
+      flash[:message] = "You have logged in as a Guest."
+      redirect_to reader
+    else
+      flash[:message] = "Guest user not found."
+      redirect_to login_path
+    end
+  end
+
   def destroy
     session.delete(:reader_id)
     flash[:notice] = "You have successfully logged out of bookface. Your books are saved."
