@@ -34,7 +34,9 @@
 
        <div class="col-md-2"> 
             <div class="card" style="width: 17rem; border-radius: 5%">
-            <img src= "<%= book.image%>" class="card-img-top" alt="test" style="border-radius: 5%" >
+            <a href="<%= book_path(book[:id]) %>">
+                <img src= "<%= book.image%>" class="card-img-top" alt="test" style="border-radius: 5%" >
+            </a>
             <div class="card-body">
                 <p class="card-text"><%= link_to book.title.upcase, book_path(book[:id]) %><br>
                 <small><%= book.author %></small><br>
